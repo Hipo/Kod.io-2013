@@ -1,0 +1,150 @@
+{
+    "sessions": [
+        {
+            "name": "Chris Stephenson",
+            "title": "",
+            "bio_html": "Wrote his first operating system, in assembler language, for IBM in 1967. Built Turkey's first university Department of Computer Science (<em>now closed</em>). Likes functional programming and writing the tests before writing the program.",
+            "twitter": "",
+            "github": "",
+            "avatar": "http://kod.io/public/images/speakers/chris-stephenson.jpg",
+            "speech_time": "Sat, 26 Oct 2013 17:58:28 +0000",
+            "speech_title": "Keynote : “Why our future is in our past?”",
+            "speech_detail_html": "<p>Is there any field of human activity where theory is translated into practice more slowly than in the field of programming?</p><p>If this process was as slow for computer hardware as it is for software, computers would still occupy whole rooms.</p><p>A few examples of things we need to learn from the past.</p>"
+        },
+        {
+            "name": "Mattt Thompson",
+            "title": "Mobile Lead at Heroku",
+            "info_html": "Mobile Lead at <a href=\"http://heroku.com\" target=\"_blank\">Heroku</a>, and the creator &amp; maintainer of <a href=\"http://afnetworking.com/\" target=\"_blank\">AFNetworking</a> and other popularopen-source projects, including <a href=\"http://postgresapp.com/\" target=\"_blank\">Postgres.app</a>, <a hef=\"http://helios.io/\" target=\"_blank\">Helios</a>, &amp; <a href=\"http://nomad-cli.com/\" target=\"_blank\">Nomad</a>. He also writes about obscure &amp; overlooked parts of Cocoa on <a href=\"http://nshipster.com\" target=\"_blank\">NSHipster</a>.",
+            "twitter": "mattt",
+            "github": "http://github.com/mattt",
+            "avatar": "http://kod.io/public/images/speakers/mattt-thompson.jpg",
+            "speech_time": "Sat, 26 Oct 2013 17:58:28 +0000",
+            "speech_title": "---",
+            "speech_detail_html": "---"
+        },
+        {
+            "name": "Sinan Yaşar",
+            "title": "UI/UX General at Koding.com",
+            "info_html": "Co-Founder and UI General of <a href=\"http://koding.com\" target=\"_blank\">Koding.com</a> platform. He is also UX Engineer and developer at <a href=\"http://koding.com\" target=\"_blank\">Koding.com</a>",
+            "twitter": "sinanyasar",
+            "github": "http://github.com/sinanyasar",
+            "avatar": "http://kod.io/public/images/speakers/sinan-yasar.jpg",
+            "speech_time": "Sat, 26 Oct 2013 17:58:28 +0000",
+            "speech_title": "Why i had to write a client side framework for Koding?",
+            "speech_detail_html": "A journey from `how web applications are written` to `how javascript frameworks changed them`, an introduction to how client side frameworks empower webapps."
+        },
+        {
+            "name": "Blake Mizerany",
+            "title": "Freelance Engineer",
+            "info_html": "Creator of Ruby web framework <a href=\"http://sinatrarb.com\" target=\"_blank\">Sinatra</a>. He worked as Researcher, Developer and Distributed Systems Architect at Heroku. Ruby, Erlang and C programmer.",
+            "twitter": "bmizerany",
+            "github": "http://github.com/bmizerany",
+            "avatar": "http://kod.io/public/images/speakers/blake-mizerany.jpg",
+            "speech_time": "Sat, 26 Oct 2013 17:58:28 +0000",
+            "speech_title": "You should learn Go!",
+            "speech_detail_html": "If you don't learn Go in the next year, you'll be one more year behind what is now *the* way to quickly build manageable, simple, fast, and reliable systems. This talk will explain why."
+        },
+        {
+            "name": "Andrew Gerrand",
+            "title": "Software Engineer at Google",
+            "info_html": "We works at <a href=\"https://www.google.com.au/\" target=\"_blank\">Google Sydney</a> on the <a href=\"http://golang.org/\" target=\"_blank\">Go Programming Language</a>.",
+            "twitter": "enneff",
+            "github": "http://github.com/nf",
+            "avatar": "http://kod.io/public/images/speakers/andrew-gerrand.jpg",
+            "speech_time": "Sat, 26 Oct 2013 17:58:28 +0000",
+            "speech_title": "Go: a simple programming environment",
+            "speech_detail_html": " <p>Go is a general-purpose language that bridges the gap between efficient statically typed languages and productive dynamic language. But it’s not just the language that makes Go special. Go has a broad and consistent standard library and powerful but simple tools.</p><p>This talk gives a brief introduction to Go, followed by live coding of a real program to demonstrate the power, scope, and simplicity of the Go programming environment.</p>"
+        },
+        {
+            "name": "Cihan Okyay",
+            "title": "Software Developer at Koding.com",
+            "info_html": "He works at <a href=\"http://koding.com\" target=\"_blank\">Koding.com</a> as software developer.",
+            "twitter": "cihann",
+            "github": "http://github.com/cihann",
+            "avatar": "http://kod.io/public/images/speakers/cihan-okyay.jpg",
+            "speech_time": "Sat, 26 Oct 2013 17:58:28 +0000",
+            "speech_title": "Using Vagrant as a Development Environment",
+            "speech_detail_html": "<p>Vagrant is a tool for building complete development environments. Some points to present:</p><ul class=\"list-unstyled\"><li>What is Vagrant ?</li><li>How does it work ?</li><li>How to configure a box ? (<em>Salt Stack provision or shell scripts</em>)</li></ul>"
+        },
+        {
+            "name": "Mark Bates",
+            "title": "Architect at Meta42 Labs",
+            "info_html": "Founder and chief architect of the <a href=\"http://metacasts.tv\" target=\"_blank\">Meta42 Labs</a>. In 2009 Mark’s first book, “<a href=\"http://www.amazon.com/gp/product/0321638360?ie=UTF8&amp;tag=groupgiftlist-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321638360\" target=\"_blank\">Distributed Programming with Ruby</a>”, was published by Addison-Wesley. In 2012 Addison-Wesley published Mark’s second book, “<a href=\"http://www.amazon.com/gp/product/032182010X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;tag=groupgiftlist-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=032182010X\" target=\"_blank\">Programming in CoffeeScript</a>”.",
+            "twitter": "markbates",
+            "github": "http://github.com/markbates",
+            "avatar": "http://kod.io/public/images/speakers/mark-bates.jpg",
+            "speech_time": "Sat, 26 Oct 2013 17:58:28 +0000",
+            "speech_title": "AngularJS vs. Ember.js vs. Backbone.js",
+            "speech_detail_html": "<p>The world of JavaScript client-side frameworks is overflowing with contenders vying for the crown, but which one do you choose for your next project? Which one has what it takes?</p><p>In this talk we’ll look at the “<strong>Big 3</strong>”, <strong>AngularJS</strong>, <strong>Ember.js</strong>, and <strong>Backbone.js</strong>. We’ll compare them head to head, toe to toe. We’ll look at the pros and cons of each one. How do they handle form bindings? Talking to APIs? Code organization? Routing? Etc?</p><p>Who’ll come out victorious in this battle of the JavaScript frameworks, or will we all just come out bloodied and bruised on the other side? Guess we’ll find out!</p>"
+        },
+        {
+            "name": "Taylan Pinçe",
+            "title": "Tech Lead at Hipo",
+            "info_html": "He is passionate about good design and development methodologies, both on the client side, and behind the curtains. He leads the talented web and mobile development team at <a href=\"http://hipo.biz\" target=\"_blank\">Hipo</a>.",
+            "twitter": "taylanpince",
+            "github": "http://github.com/taylanpince",
+            "avatar": "http://kod.io/public/images/speakers/taylan-pince.jpg",
+            "speech_time": "Sat, 26 Oct 2013 17:58:28 +0000",
+            "speech_title": "Beyond REST: Mobile Applications and Custom API Protocols",
+            "speech_detail_html": "<p>Most mobile applications are built on a RESTful API layer that uses standard HTTP for communicating back and forth. In this talk we will take a look at the principles of REST and how to best integrate them in a mobile context.</p><p>But then we will take this topic further and explore what kind of specialized API layers can be used with mobile apps, such as custom TCP-based protocols and other purpose-built socket connections that offer more flexibility and live update features.</p>"
+        },
+        {
+            "name": "Joshua Ballanco",
+            "title": "Chief Scientist at Burnside Digital",
+            "info_html": "He is a core developer of <a href=\"http://macruby.org/\" target=\"_blank\">MacRuby</a> and <a href=\"http://rubymotion.com/\" target=\"_blank\">Rubymotion</a>. He lives in Ankara/Turkey. He works at <a href=\"http://burnsidedigital.com/\" target=\"_blank\">Burnside Digital</a>.",
+            "twitter": "manhattanmetric",
+            "github": "http://github.com/jballanc",
+            "avatar": "http://kod.io/public/images/speakers/joshua-ballanco.jpg",
+            "speech_time": "Sat, 26 Oct 2013 17:58:28 +0000",
+            "speech_title": "Sure, I could learn Objective-C, but...",
+            "speech_detail_html": "<p>If you've heard of RubyMotion, chances are that you've also heard people tell you to \"just learn Objective-C\". In this talk, we'll look at how RubyMotion is so much more than a way to write iOS apps in another language.</p><p>Using all the strengths of Ruby, we'll see how RubyMotion can make your code cleaner, easier to read, and more efficient.</p>"
+        },
+        {
+            "name": "Barış Daylık",
+            "title": "CTO at VNGRS",
+            "info_html": "He works at <a href=\"http://vngrs.com\" target=\"_blank\">VNGRS</a> as Chief Technology Officer.",
+            "twitter": "bdaylik",
+            "github": "http://github.com/bdaylik",
+            "avatar": "http://kod.io/public/images/speakers/baris-daylik.jpg",
+            "speech_time": "Sat, 26 Oct 2013 17:58:28 +0000",
+            "speech_title": "---",
+            "speech_detail_html": "---"
+        }
+    ],
+    "info": {
+        "location": {
+            "lat": 27.101,
+            "long": 28.092
+        },
+        "title": "Koç Üniversitesi",
+        "detail_html": "<p>Hemşirelik Yüksek Okulu</p><p>Güzelbahçe Sokak No. 20, Nişantaşı</p><p>34365 - İstanbul - Türkiye</p>",
+        "organizers": [
+            {
+                "title": "Main Organizers",
+                "companies": [
+                    {
+                        "image": "http://global.broad.msu.edu/images/grc/Koc_University_Turkey.jpg",
+                        "url": "http://www.ku.edu.tr/"
+                    },
+                    {
+                        "image": "http://global.broad.msu.edu/images/grc/Koc_University_Turkey.jpg",
+                        "url": "http://www.ku.edu.tr/"
+                    }
+                ]
+            },
+            {
+                "title": "Gold Sponsors",
+                "companies": [
+                    {
+                        "image": "http://global.broad.msu.edu/images/grc/Koc_University_Turkey.jpg",
+                        "url": "http://www.ku.edu.tr/"
+                    },
+                    {
+                        "image": "http://global.broad.msu.edu/images/grc/Koc_University_Turkey.jpg",
+                        "url": "http://www.ku.edu.tr/"
+                    }
+                ]
+            }
+        ]
+    }
+}
