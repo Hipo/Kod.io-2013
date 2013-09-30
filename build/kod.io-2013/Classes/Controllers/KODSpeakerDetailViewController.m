@@ -16,15 +16,31 @@
 
 #import <DTCoreText/DTCoreText.h>
 
+@interface KODSpeakerDetailLinkButton : UIButton
+
+@property (nonatomic, readwrite, assign) NSURL *link;
+
+@end
+
+@implementation KODSpeakerDetailLinkButton
+
+@synthesize link;
+
+@end
+
+
+
 @interface KODSpeakerDetailViewController () {
 @private
     NSDateFormatter *_timeFormatter;
     KODSession *_session;
     UIImageView *_avatarView;
+    UIScrollView *_scrollView;
 }
 
 - (void)didTapTwitterButton:(id)sender;
 - (void)didTapGithubButton:(id)sender;
+- (void)didTapLinkButton:(id)sender;
 
 @end
 
@@ -32,8 +48,6 @@ static CGFloat const kAvatarHolderHeight = 130.0;
 static CGFloat const kButtonTopMargin = 30.0;
 static CGFloat const kAvatarBorderTopMargin = 20.0;
 static CGFloat const kSpeakerTitleTopMargin = 100.0;
-static CGFloat const kTitleLabelTopMargin = 190.0;
-
 
 @implementation KODSpeakerDetailViewController
 
@@ -161,8 +175,18 @@ static CGFloat const kTitleLabelTopMargin = 190.0;
     [speakerTitleLabel setFont:[UIFont fontWithName:@"NoticiaText-Regular" size:12.0]];
     [avatarHolderView addSubview:speakerTitleLabel];
 
+
+    CGRect scrollViewFrame = CGRectZero;
+    scrollViewFrame.origin.y = CGRectGetMaxY(avatarHolderFrame);
+    scrollViewFrame.size.width = self.contentView.frame.size.width;
+    scrollViewFrame.size.height = self.contentView.frame.size.height - scrollViewFrame.origin.y;
+
+    _scrollView = [[UIScrollView alloc] initWithFrame:scrollViewFrame];
+    [_scrollView setAutoresizingMask:UIViewAutoresizingFlexibleHeight];
+
+    [self.contentView addSubview:_scrollView];
+
     CGRect titleLabelFrame = CGRectZero;
-    titleLabelFrame.origin.y = kTitleLabelTopMargin;
     titleLabelFrame.origin.x = 20.0;
     titleLabelFrame.size.width = 210.0;
     titleLabelFrame.size.height = CGFLOAT_MAX;
@@ -174,18 +198,17 @@ static CGFloat const kTitleLabelTopMargin = 190.0;
     [titleLabel setTextAlignment:NSTextAlignmentLeft];
     [titleLabel setFont:[UIFont fontWithName:@"TisaOT-Medi" size:19.0]];
     [titleLabel setText:_session.speechTitle];
-    [self.contentView addSubview:titleLabel];
+    [_scrollView addSubview:titleLabel];
 
     [titleLabel sizeToFit];
 
     titleLabelFrame = titleLabel.frame;
-    titleLabelFrame.origin.y = kTitleLabelTopMargin;
     [titleLabel setFrame:titleLabelFrame];
 
     CGRect timeLabelFrame = CGRectZero;
     timeLabelFrame.size.width = 50.0;
     timeLabelFrame.size.height = 20.0;
-    timeLabelFrame.origin.y = kTitleLabelTopMargin + roundf((titleLabelFrame.size.height - timeLabelFrame.size.height) / 2.0);
+    timeLabelFrame.origin.y = roundf((titleLabelFrame.size.height - timeLabelFrame.size.height) / 2.0);
     timeLabelFrame.origin.x = self.contentView.frame.size.width - 20.0 - timeLabelFrame.size.width;
 
     UILabel *timeLabel = [[[UILabel alloc] initWithFrame:timeLabelFrame] autorelease];
@@ -194,7 +217,7 @@ static CGFloat const kTitleLabelTopMargin = 190.0;
     [timeLabel setTextAlignment:NSTextAlignmentRight];
     [timeLabel setFont:[UIFont fontWithName:@"TisaOT-Medi" size:19.0]];
     [timeLabel setText:[_timeFormatter stringFromDate:_session.speechTime]];
-    [self.contentView addSubview:timeLabel];
+    [_scrollView addSubview:timeLabel];
 
     CGRect speechDetailLabelFrame = CGRectZero;
     speechDetailLabelFrame.origin.x = 20.0;
@@ -205,7 +228,7 @@ static CGFloat const kTitleLabelTopMargin = 190.0;
 
     NSDictionary *options = @{
                               DTDefaultFontFamily : @"TisaOT",
-                              DTDefaultFontSize : @(12),
+                              DTDefaultFontSize : @(14),
                               DTDefaultTextColor : [UIColor blackColor]
                               };
 
@@ -215,6 +238,7 @@ static CGFloat const kTitleLabelTopMargin = 190.0;
                                               documentAttributes:nil];
 
 	DTAttributedTextContentView *speechDetailView = [[DTAttributedTextContentView alloc] initWithFrame:speechDetailLabelFrame];
+    [speechDetailView setDelegate:self];
 
     [speechDetailView setBackgroundColor:[UIColor clearColor]];
     [speechDetailView setAttributedString:builder.generatedAttributedString];
@@ -225,8 +249,26 @@ static CGFloat const kTitleLabelTopMargin = 190.0;
     speechDetailLabelFrame.origin.y = CGRectGetMaxY(titleLabel.frame) + 10.0;
     [speechDetailView setFrame:speechDetailLabelFrame];
 
-    [self.contentView addSubview:speechDetailView];
+    [_scrollView addSubview:speechDetailView];
 
+    [_scrollView setContentSize:CGSizeMake(self.contentView.frame.size.width,
+                                           CGRectGetMaxY(speechDetailLabelFrame))];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [backButton setImage:[UIImage imageNamed:@"im-back.png"]
+                 forState:UIControlStateNormal];
+
+     [backButton addTarget:self.navigationController
+                    action:@selector(popViewControllerAnimated:)
+          forControlEvents:UIControlEventTouchUpInside];
+     [backButton sizeToFit];
+
+     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+     [self.navigationItem setLeftBarButtonItem:item animated:YES];
 }
 
 #pragma mark - Actions
@@ -240,10 +282,39 @@ static CGFloat const kTitleLabelTopMargin = 190.0;
     NSURL *appURL = [NSURL URLWithString:[NSString stringWithFormat:@"twitter://user?screen_name=%@",
                                           _session.speakerTwitter]];
 
+    NSURL *webURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://twitter.com/%@",
+                                          _session.speakerTwitter]];
+
     if ([[UIApplication sharedApplication] canOpenURL:appURL]) {
         [[UIApplication sharedApplication] openURL:appURL];
+    } else {
+        [[UIApplication sharedApplication] openURL:webURL];
     }
 }
 
+- (void)didTapLinkButton:(id)sender {
+    DTLinkButton *button = (DTLinkButton *)sender;
+
+    [[UIApplication sharedApplication] openURL:button.URL];
+}
+
+
+
+#pragma mark -  DTAttributedTextContentViewDelegate
+
+- (UIView *)attributedTextContentView:(DTAttributedTextContentView *)attributedTextContentView
+                          viewForLink:(NSURL *)url
+                           identifier:(NSString *)identifier
+                                frame:(CGRect)frame {
+    DTLinkButton *linkButton = [[DTLinkButton alloc] initWithFrame:frame];
+
+    linkButton.URL = url;
+
+    [linkButton addTarget:self
+                   action:@selector(didTapLinkButton:)
+         forControlEvents:UIControlEventTouchUpInside];
+
+    return linkButton;
+}
 
 @end

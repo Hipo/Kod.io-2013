@@ -8,9 +8,12 @@
 
 #import "KODBaseViewController.h"
 
+#import <DTCoreText/DTCoreText.h>
+
 @class KODSession;
 
 @interface KODSpeakerDetailViewController : KODBaseViewController
+<DTAttributedTextContentViewDelegate>
 
 - (id)initWithSession:(KODSession *)session;
 

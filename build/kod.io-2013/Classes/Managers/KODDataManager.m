@@ -9,6 +9,9 @@
 #import "KODDataManager.h"
 
 #import "KODSession.h"
+#import <HPUtils/JSONKit.h>
+
+#define KOD_USELOCALDATA 0
 
 @interface KODDataManager () {
 @private
@@ -42,7 +45,67 @@ static KODDataManager * sharedInstance = nil;
 #pragma mark - Fetch Method
 
 - (void)fetchDataWithCompletionBlock:(void (^)(NSError *))block {
+    
+#ifdef KOD_USELOCALDATA
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSBundle *mainBundle = [NSBundle mainBundle];
+
+        NSURL *localDataURL = [mainBundle URLForResource:@"data" withExtension:@"json"];
+        NSError *readError = nil;
+
+        NSData *localData = [NSData dataWithContentsOfURL:localDataURL
+                                                  options:0
+                                                    error:&readError];
+
+        if (nil != readError) {
+            block (readError);
+            return;
+        }
+
+        NSError *parseError = nil;
+        id jsonObject = [localData objectFromJSONDataWithParseOptions:0
+                                                                error:&parseError];
+
+
+        if (nil != parseError) {
+            block (parseError);
+            return;
+        }
+
+        NSDictionary *resources = (NSDictionary *)jsonObject;
+
+        NSDictionary *infoInfo = [resources nonNullValueForKey:@"info"];
+        NSArray *sessionsInfo = [resources nonNullValueForKey:@"sessions"];
+        NSMutableArray *sessions = [NSMutableArray array];
+
+        for (NSDictionary *sessionInfo in sessionsInfo) {
+            [sessions addObject:[KODSession sessionWithInfo:sessionInfo]];
+        }
+
+        [sessions sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+            KODSession *session1 = (KODSession *)obj1;
+            KODSession *session2 = (KODSession *)obj2;
+
+            return [session1.speechTime compare:session2.speechTime];
+        }];
+
+        [_sessions autorelease];
+        _sessions = [[NSArray alloc] initWithArray:sessions];
+
+        [_info autorelease];
+        _info = [[NSDictionary alloc] initWithDictionary:infoInfo];
+
+        block (nil);
+
+        [[NSNotificationCenter defaultCenter] postNotificationName:KODDataManagerFetchedDataNotification object:nil];
+
+    });
+
+#else
     HPRequestManager *manager = [HPRequestManager sharedManager];
+
+
 
     HPRequestOperation *request = [manager requestForPath:@""
                                               withBaseURL:kDataPath
@@ -80,8 +143,10 @@ static KODDataManager * sharedInstance = nil;
 
         [[NSNotificationCenter defaultCenter] postNotificationName:KODDataManagerFetchedDataNotification object:nil];
     }];
-
+    
     [manager enqueueRequest:request];
+#endif
+
 }
 
 @end
