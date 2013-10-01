@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B93009BB17F998E200C08752 /* KODInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B93009BA17F998E200C08752 /* KODInfoViewController.m */; };
+		B93009BD17F99A9F00C08752 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B93009BC17F99A9F00C08752 /* MapKit.framework */; };
+		B93009C017FADEA100C08752 /* KODOrganizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B93009BF17FADEA100C08752 /* KODOrganizer.m */; };
+		B93009C317FAE9F500C08752 /* KODImageLoadingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B93009C217FAE9F500C08752 /* KODImageLoadingCell.m */; };
 		B934CE3D17F48DFC009B8F3B /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = B934CE3317F48DFC009B8F3B /* iTunesArtwork.png */; };
 		B934CE3E17F48DFC009B8F3B /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = B934CE3417F48DFC009B8F3B /* AppIcon29x29.png */; };
 		B934CE3F17F48DFC009B8F3B /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B934CE3517F48DFC009B8F3B /* AppIcon29x29@2x.png */; };
@@ -90,6 +94,13 @@
 		B91AD92C17F08F0B00B31993 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B91AD92D17F08F0B00B31993 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B91AD92E17F08F0B00B31993 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		B93009B917F998E200C08752 /* KODInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KODInfoViewController.h; sourceTree = "<group>"; };
+		B93009BA17F998E200C08752 /* KODInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KODInfoViewController.m; sourceTree = "<group>"; };
+		B93009BC17F99A9F00C08752 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B93009BE17FADEA100C08752 /* KODOrganizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KODOrganizer.h; sourceTree = "<group>"; };
+		B93009BF17FADEA100C08752 /* KODOrganizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KODOrganizer.m; sourceTree = "<group>"; };
+		B93009C117FAE9F500C08752 /* KODImageLoadingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KODImageLoadingCell.h; sourceTree = "<group>"; };
+		B93009C217FAE9F500C08752 /* KODImageLoadingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KODImageLoadingCell.m; sourceTree = "<group>"; };
 		B934CE3317F48DFC009B8F3B /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		B934CE3417F48DFC009B8F3B /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
 		B934CE3517F48DFC009B8F3B /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
@@ -173,6 +184,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B93009BD17F99A9F00C08752 /* MapKit.framework in Frameworks */,
 				B94CF04317F352B2001E188B /* libxml2.dylib in Frameworks */,
 				B94CF04117F35282001E188B /* ImageIO.framework in Frameworks */,
 				B957275517F09A4200ED5088 /* CoreGraphics.framework in Frameworks */,
@@ -211,6 +223,7 @@
 		B91AD8F117F05C7A00B31993 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B93009BC17F99A9F00C08752 /* MapKit.framework */,
 				B94CF04217F352B2001E188B /* libxml2.dylib */,
 				B94CF04017F35282001E188B /* ImageIO.framework */,
 				B94CEFFF17F31909001E188B /* CoreLocation.framework */,
@@ -288,6 +301,8 @@
 				B94CF02617F321A8001E188B /* KODNavigationController.m */,
 				B94CF02E17F33CE8001E188B /* KODSpeakerDetailViewController.h */,
 				B94CF02F17F33CE8001E188B /* KODSpeakerDetailViewController.m */,
+				B93009B917F998E200C08752 /* KODInfoViewController.h */,
+				B93009BA17F998E200C08752 /* KODInfoViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -306,6 +321,8 @@
 			children = (
 				B94CEFF517F2EE30001E188B /* KODSession.h */,
 				B94CEFF617F2EE30001E188B /* KODSession.m */,
+				B93009BE17FADEA100C08752 /* KODOrganizer.h */,
+				B93009BF17FADEA100C08752 /* KODOrganizer.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -313,6 +330,8 @@
 		B91AD92A17F08F0B00B31993 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B93009C117FAE9F500C08752 /* KODImageLoadingCell.h */,
+				B93009C217FAE9F500C08752 /* KODImageLoadingCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -532,7 +551,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B93009C017FADEA100C08752 /* KODOrganizer.m in Sources */,
+				B93009BB17F998E200C08752 /* KODInfoViewController.m in Sources */,
 				B94CF00417F31D83001E188B /* UIColor+Kodio.m in Sources */,
+				B93009C317FAE9F500C08752 /* KODImageLoadingCell.m in Sources */,
 				B94CF03017F33CE8001E188B /* KODSpeakerDetailViewController.m in Sources */,
 				B94CF02D17F3387C001E188B /* UIView+CircularMask.m in Sources */,
 				B95F855B17F1B3A2003ECD55 /* KODSplashViewController.m in Sources */,

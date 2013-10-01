@@ -113,22 +113,27 @@
     ],
     "info": {
         "location": {
-            "lat": 27.101,
-            "long": 28.092
+            "lat": 41.063499,
+            "long": 28.979997,
+            "span": { "lat": 0.010987, "long": 0.022724}
         },
         "title": "Koç Üniversitesi",
-        "detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Hemşirelik Yüksek Okulu</p><p style=\"font-family:'TisoOT';font-size:16px;\">Güzelbahçe Sokak No. 20, Nişantaşı</p><p style=\"font-family:'TisoOT';font-size:16px;\">34365 - İstanbul - Türkiye</p>",
+        "detail_html": "<p style=\"font-family:'TisoOT-Medi';font-size:22px;text-align:center;color:#ed582a;margin-top:20px;margin-bot:10px;\">Koç Üniversitesi</p><p style=\"font-family:'TisoOT';font-size:14px;text-align: center;\">Hemşirelik Yüksek Okulu<br />Güzelbahçe Sokak No. 20, Nişantaşı<br />34365 - İstanbul - Türkiye</p>",
         "organizers": [
             {
                 "title": "Main Organizers",
                 "companies": [
                     {
-                        "image": "http://global.broad.msu.edu/images/grc/Koc_University_Turkey.jpg",
-                        "url": "http://www.ku.edu.tr/"
+                        "image": "http://kod.io/public/images/sponsors/koc-inc.png",
+                        "url": "http://incubation.ku.edu.tr/en/"
                     },
                     {
-                        "image": "http://global.broad.msu.edu/images/grc/Koc_University_Turkey.jpg",
-                        "url": "http://www.ku.edu.tr/"
+                        "image": "http://kod.io/public/images/sponsors/webbox.png",
+                        "url": "http://webbox.io/"
+                    },
+                    {
+                        "image": "http://kod.io/public/images/sponsors/koc-rd.png",
+                        "url": "http://vprd.ku.edu.tr/rpd/home"
                     }
                 ]
             },
@@ -136,12 +141,70 @@
                 "title": "Gold Sponsors",
                 "companies": [
                     {
-                        "image": "http://global.broad.msu.edu/images/grc/Koc_University_Turkey.jpg",
-                        "url": "http://www.ku.edu.tr/"
+                        "image": "http://kod.io/public/images/sponsors/sadece-hosting.png",
+                        "url": "http://sadecehosting.com/"
                     },
                     {
-                        "image": "http://global.broad.msu.edu/images/grc/Koc_University_Turkey.jpg",
-                        "url": "http://www.ku.edu.tr/"
+                        "image": "http://kod.io/public/images/sponsors/vngrs.png",
+                        "url": "http://vngrs.com/"
+                    }
+                ]
+            },
+            {
+                "title": "Sponsors",
+                "companies": [
+                    {
+                        "image": "http://kod.io/public/images/sponsors/hipo.png",
+                        "url": "http://hipo.biz/"
+                    },
+                    {
+                        "image": "http://kod.io/public/images/sponsors/paylas.png",
+                        "url": "http://paylas.com/"
+                    },
+                    {
+                        "image": "http://kod.io/public/images/sponsors/webrazzi.png",
+                        "url": "http://webrazzi.com/"
+                    }
+                ]
+            },
+            {
+                "title": "Supporters",
+                "companies": [
+                    {
+                        "image": "http://kod.io/public/images/supporters/tarikkavazcom.png",
+                        "url": "http://tarikkavaz.com/"
+                    },
+                    {
+                        "image": "http://kod.io/public/images/supporters/devpod.png",
+                        "url": "http://devpod.tumblr.com/"
+                    },
+                    {
+                        "image": "http://kod.io/public/images/supporters/sonsuz-dongu.png",
+                        "url": "http://sonsuzdongu.com/"
+                    },
+                    {
+                        "image": "http://kod.io/public/images/supporters/koc-gk.jpg",
+                        "url": "http://www.kocgirisimcilik.com/"
+                    },
+                    {
+                        "image": "http://kod.io/public/images/supporters/jstanbul.png",
+                        "url": "http://jstanbul.org/"
+                    },
+                    {
+                        "image": "http://kod.io/public/images/supporters/valven.png",
+                        "url": "http://www.valven.com/"
+                    },
+                    {
+                        "image": "http://kod.io/public/images/supporters/venturro.png",
+                        "url": "http://www.venturro.com/"
+                    },
+                    {
+                        "image": "http://kod.io/public/images/supporters/ingenious.png",
+                        "url": "http://phi.com.tr/"
+                    },
+                    {
+                        "image": "http://kod.io/public/images/supporters/8digits.png",
+                        "url": "http://8digits.com/"
                     }
                 ]
             }

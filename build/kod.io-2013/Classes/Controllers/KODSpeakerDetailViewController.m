@@ -232,10 +232,10 @@ static CGFloat const kSpeakerTitleTopMargin = 100.0;
                               DTDefaultTextColor : [UIColor blackColor]
                               };
 
-    DTHTMLAttributedStringBuilder *builder = [[DTHTMLAttributedStringBuilder  alloc]
+    DTHTMLAttributedStringBuilder *builder = [[[DTHTMLAttributedStringBuilder  alloc]
                                               initWithHTML:[_session.speechDetail dataUsingEncoding:NSUTF8StringEncoding]
                                               options:options
-                                              documentAttributes:nil];
+                                              documentAttributes:nil] autorelease];
 
 	DTAttributedTextContentView *speechDetailView = [[DTAttributedTextContentView alloc] initWithFrame:speechDetailLabelFrame];
     [speechDetailView setDelegate:self];

@@ -9,6 +9,8 @@
 #import "KODSessionsViewController.h"
 
 #import "KODSpeakerDetailViewController.h"
+#import "KODNavigationController.h"
+#import "KODInfoViewController.h"
 #import "KODDataManager.h"
 #import "KODSession.h"
 
@@ -242,7 +244,27 @@ static NSString * const KODSessionsViewControllerRequestIdentifier = @"KODSessio
 #pragma mark - Actions
 
 - (void)didTapInfoButton:(id)sender {
-    NSLog(@">>>>>INFO BUTTON");
+    KODInfoViewController *controller = [[[KODInfoViewController alloc]
+                                          initWithNibName:nil
+                                          bundle:nil]
+                                         autorelease];
+    [controller setDelegate:self];
+
+    KODNavigationController *navController = [[[KODNavigationController alloc]
+                                              initWithRootViewController:controller]
+                                             autorelease];
+
+    [self.navigationController
+     presentViewController:navController
+     animated:YES
+     completion:nil];
+
+    if ([navController.navigationBar respondsToSelector:@selector(setBarTintColor:)]) {
+        [navController.navigationBar setBarTintColor:[UIColor navigationBarColor]];
+        [navController.navigationBar setTranslucent:NO];
+    } else {
+        [navController.navigationBar setTintColor:[UIColor navigationBarColor]];
+    }
 }
 
 #pragma mark - Notifications
@@ -293,6 +315,13 @@ static NSString * const KODSessionsViewControllerRequestIdentifier = @"KODSessio
             [request cancel];
         }
     }
+}
+
+#pragma mark - KODModalViewControllerDelegate
+
+- (void)modalViewControllerDidDismiss:(UIViewController *)controller {
+    [self.navigationController dismissViewControllerAnimated:YES
+                                                  completion:nil];
 }
 
 

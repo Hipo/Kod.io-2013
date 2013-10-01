@@ -26,4 +26,6 @@
 
 + (UIColor *)speakerDetailDetailTextColor;
 
++ (UIColor *)infoBackgroundColor;
+
 @end

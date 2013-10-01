@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol KODModalViewControllerDelegate <NSObject>
+
+- (void)modalViewControllerDidDismiss:(UIViewController *)controller;
+
+@end
+
 @interface KODBaseViewController : UIViewController
 
 @property (nonatomic, readonly) UIView *contentView;
