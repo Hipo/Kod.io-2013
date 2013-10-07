@@ -3,10 +3,10 @@
         {
             "name": "Chris Stephenson",
             "title": "",
-            "info_html": "<p style=\"color:rgb(62, 110, 98);font-family:'Noticia Text', serif;font-size:15px;text-align: center;\">Wrote his first operating system, in assembler language, for IBM in 1967. Built Turkey's first university Department of Computer Science (<em>now closed</em>). Likes functional programming and writing the tests before writing the program.</p>",
+            "info_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Wrote his first operating system, in assembler language, for IBM in 1967. Built Turkey's first university Department of Computer Science (<em>now closed</em>). Likes functional programming and writing the tests before writing the program.</p>",
             "twitter": "chrisjstephensn",
             "github": "",
-            "avatar": "http://kod.io/public/images/speakers/chris-stephenson.jpg",
+            "avatar": "http://kod.io/public/images/speakers/chris-stephenson@2x.jpg",
             "speech_time": "Sat, 26 Oct 2013 06:30:00 +0000",
             "speech_title": "Keynote : “Why our future is in our past?”",
             "speech_detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Is there any field of human activity where theory is translated into practice more slowly than in the field of programming?</p><p style=\"font-family:'TisoOT';font-size:16px;\">If this process was as slow for computer hardware as it is for software, computers would still occupy whole rooms.</p><p style=\"font-family:'TisoOT';font-size:16px;\">A few examples of things we need to learn from the past.</p>"
@@ -14,10 +14,10 @@
         {
             "name": "Mattt Thompson",
             "title": "Mobile Lead at Heroku",
-            "info_html": "<p style=\"color:rgb(62, 110, 98);font-family:'Noticia Text', serif;font-size:15px;text-align: center;\">Mobile Lead at <a href=\"http://heroku.com\" target=\"_blank\">Heroku</a>, and the creator &amp; maintainer of <a href=\"http://afnetworking.com/\" target=\"_blank\">AFNetworking</a> and other popularopen-source projects, including <a href=\"http://postgresapp.com/\" target=\"_blank\">Postgres.app</a>, <a hef=\"http://helios.io/\" target=\"_blank\">Helios</a>, &amp; <a href=\"http://nomad-cli.com/\" target=\"_blank\">Nomad</a>. He also writes about obscure &amp; overlooked parts of Cocoa on <a href=\"http://nshipster.com\" target=\"_blank\">NSHipster</a>.</                                                                                                                                                                                                                                                                                                                                                                                                                                                                       </p>",
+            "info_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Mobile Lead at <a href=\"http://heroku.com\" target=\"_blank\">Heroku</a>, and the creator &amp; maintainer of <a href=\"http://afnetworking.com/\" target=\"_blank\">AFNetworking</a> and other popularopen-source projects, including <a href=\"http://postgresapp.com/\" target=\"_blank\">Postgres.app</a>, <a hef=\"http://helios.io/\" target=\"_blank\">Helios</a>, &amp; <a href=\"http://nomad-cli.com/\" target=\"_blank\">Nomad</a>. He also writes about obscure &amp; overlooked parts of Cocoa on <a href=\"http://nshipster.com\" target=\"_blank\">NSHipster</a>.</                                                                                                                                                                                                                                                                                                                                                                                                                                                                       </p>",
             "twitter": "mattt",
             "github": "http://github.com/mattt",
-            "avatar": "http://kod.io/public/images/speakers/mattt-thompson.jpg",
+            "avatar": "http://kod.io/public/images/speakers/mattt-thompson@2x.jpg",
             "speech_time": "Sat, 26 Oct 2013 09:00:00 +0000",
             "speech_title": "Building Next-Generation iOS Apps with AFNetworking 2.0",
             "speech_detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">AFNetworking is a delightful open source Objective-C framework for communicating between the client and server. Find out how it's recent 2.0 release can be used to build next-generation iOS 7 apps with real-time functionality, offline support, and background capabilities.</p>"
@@ -25,10 +25,10 @@
         {
             "name": "Sinan Yaşar",
             "title": "UI/UX General at Koding.com",
-            "info_html": "<p style=\"color:rgb(62, 110, 98);font-family:'Noticia Text', serif;font-size:15px;text-align: center;\">Co-Founder and UI General of <a href=\"http://koding.com\" target=\"_blank\">Koding.com</a> platform. He is also UX Engineer and developer at <a href=\"http://koding.com\" target=\"_blank\">Koding.com</a></p>",
+            "info_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Co-Founder and UI General of <a href=\"http://koding.com\" target=\"_blank\">Koding.com</a> platform. He is also UX Engineer and developer at <a href=\"http://koding.com\" target=\"_blank\">Koding.com</a></p>",
             "twitter": "sinanyasar",
             "github": "http://github.com/sinanyasar",
-            "avatar": "http://kod.io/public/images/speakers/sinan-yasar.jpg",
+            "avatar": "http://kod.io/public/images/speakers/sinan-yasar@2x.jpg",
             "speech_time": "Sat, 26 Oct 2013 15:00:00 +0000",
             "speech_title": "Why I had to write a client side framework for Koding?",
             "speech_detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">A journey from `how web applications are written` to `how javascript frameworks changed them`, an introduction to how client side frameworks empower webapps.</p>"
@@ -36,10 +36,10 @@
         {
             "name": "Blake Mizerany",
             "title": "Freelance Engineer",
-            "info_html": "<p style=\"color:rgb(62, 110, 98);font-family:'Noticia Text', serif;font-size:15px;text-align: center;\">Creator of Ruby web framework <a href=\"http://sinatrarb.com\" target=\"_blank\">Sinatra</a>. He worked as Researcher, Developer and Distributed Systems Architect at Heroku. Ruby, Erlang and C programmer.</p>",
+            "info_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Creator of Ruby web framework <a href=\"http://sinatrarb.com\" target=\"_blank\">Sinatra</a>. He worked as Researcher, Developer and Distributed Systems Architect at Heroku. Ruby, Erlang and C programmer.</p>",
             "twitter": "bmizerany",
             "github": "http://github.com/bmizerany",
-            "avatar": "http://kod.io/public/images/speakers/blake-mizerany.jpg",
+            "avatar": "http://kod.io/public/images/speakers/blake-mizerany@2x.jpg",
             "speech_time": "Sat, 26 Oct 2013 07:00:00 +0000",
             "speech_title": "You should learn Go!",
             "speech_detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">If you don't learn Go in the next year, you'll be one more year behind what is now *the* way to quickly build manageable, simple, fast, and reliable systems. This talk will explain why.</p>"
@@ -47,10 +47,10 @@
         {
             "name": "Andrew Gerrand",
             "title": "Software Engineer at Google",
-            "info_html": "<p style=\"color:rgb(62, 110, 98);font-family:'Noticia Text', serif;font-size:15px;text-align: center;\">We works at <a href=\"https://www.google.com.au/\" target=\"_blank\">Google Sydney</a> on the <a href=\"http://golang.org/\" target=\"_blank\">Go Programming Language</a>.</p>",
+            "info_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">We works at <a href=\"https://www.google.com.au/\" target=\"_blank\">Google Sydney</a> on the <a href=\"http://golang.org/\" target=\"_blank\">Go Programming Language</a>.</p>",
             "twitter": "enneff",
             "github": "http://github.com/nf",
-            "avatar": "http://kod.io/public/images/speakers/andrew-gerrand.jpg",
+            "avatar": "http://kod.io/public/images/speakers/andrew-gerrand@2x.jpg",
             "speech_time": "Sat, 26 Oct 2013 13:00:00 +0000",
             "speech_title": "Go: a simple programming environment",
             "speech_detail_html": " <p style=\"font-family:'TisoOT';font-size:16px;\">Go is a general-purpose language that bridges the gap between efficient statically typed languages and productive dynamic language. But it’s not just the language that makes Go special. Go has a broad and consistent standard library and powerful but simple tools.</p><p style=\"font-family:'TisoOT';font-size:16px;\">This talk gives a brief introduction to Go, followed by live coding of a real program to demonstrate the power, scope, and simplicity of the Go programming environment.</p>"
@@ -58,10 +58,10 @@
         {
             "name": "Cihan Okyay",
             "title": "Software Developer at Koding.com",
-            "info_html": "<p style=\"color:rgb(62, 110, 98);font-family:'Noticia Text', serif;font-size:15px;text-align: center;\">He works at <a href=\"http://koding.com\" target=\"_blank\">Koding.com</a> as software developer.</p>",
+            "info_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">He works at <a href=\"http://koding.com\" target=\"_blank\">Koding.com</a> as software developer.</p>",
             "twitter": "cihann",
             "github": "http://github.com/cihann",
-            "avatar": "http://kod.io/public/images/speakers/cihan-okyay.jpg",
+            "avatar": "http://kod.io/public/images/speakers/cihan-okyay@2x.jpg",
             "speech_time": "Sat, 26 Oct 2013 08:00:00 +0000",
             "speech_title": "Using Vagrant as a Development Environment",
             "speech_detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Vagrant is a tool for building complete development environments. Some points to present:</p><ul class=\"list-unstyled\"><li>What is Vagrant ?</li><li>How does it work ?</li><li>How to configure a box ? (<em>Salt Stack provision or shell scripts</em>)</li></ul></p>"
@@ -69,10 +69,10 @@
         {
             "name": "Mark Bates",
             "title": "Architect at Meta42 Labs",
-            "info_html": "<p style=\"color:rgb(62, 110, 98);font-family:'Noticia Text', serif;font-size:15px;text-align: center;\">Founder and chief architect of the <a href=\"http://metacasts.tv\" target=\"_blank\">Meta42 Labs</a>. In 2009 Mark’s first book, “<a href=\"http://www.amazon.com/gp/product/0321638360?ie=UTF8&amp;tag=groupgiftlist-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321638360\" target=\"_blank\">Distributed Programming with Ruby</a>”, was published by Addison-Wesley. In 2012 Addison-Wesley published Mark’s second book, “<a href=\"http://www.amazon.com/gp/product/032182010X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;tag=groupgiftlist-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=032182010X\" target=\"_blank\">Programming in CoffeeScript</a>”.</p>",
+            "info_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Founder and chief architect of the <a href=\"http://metacasts.tv\" target=\"_blank\">Meta42 Labs</a>. In 2009 Mark’s first book, “<a href=\"http://www.amazon.com/gp/product/0321638360?ie=UTF8&amp;tag=groupgiftlist-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321638360\" target=\"_blank\">Distributed Programming with Ruby</a>”, was published by Addison-Wesley. In 2012 Addison-Wesley published Mark’s second book, “<a href=\"http://www.amazon.com/gp/product/032182010X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;tag=groupgiftlist-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=032182010X\" target=\"_blank\">Programming in CoffeeScript</a>”.</p>",
             "twitter": "markbates",
             "github": "http://github.com/markbates",
-            "avatar": "http://kod.io/public/images/speakers/mark-bates.jpg",
+            "avatar": "http://kod.io/public/images/speakers/mark-bates@2x.jpg",
             "speech_time": "Sat, 26 Oct 2013 11:00:00 +0000",
             "speech_title": "AngularJS vs. Ember.js vs. Backbone.js",
             "speech_detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">The world of JavaScript client-side frameworks is overflowing with contenders vying for the crown, but which one do you choose for your next project? Which one has what it takes?</p><pstyle=\"font-family:'TisoOT';font-size:16px;\">In this talk we’ll look at the “<strong>Big 3</strong>”, <strong>AngularJS</strong>, <strong>Ember.js</strong>, and <strong>Backbone.js</strong>. We’ll compare them head to head, toe to toe. We’ll look at the pros and cons of each one. How do they handle form bindings? Talking to APIs? Code organization? Routing? Etc?</p><p style=\"font-family:'TisoOT';font-size:16px;\">Who’ll come out victorious in this battle of the JavaScript frameworks, or will we all just come out bloodied and bruised on the other side? Guess we’ll find out!</p>"
@@ -80,10 +80,10 @@
         {
             "name": "Taylan Pinçe",
             "title": "Tech Lead at Hipo",
-            "info_html": "<p style=\"color:rgb(62, 110, 98);font-family:'Noticia Text', serif;font-size:15px;text-align: center;\">He is passionate about good design and development methodologies, both on the client side, and behind the curtains. He leads the talented web and mobile development team at <a href=\"http://hipo.biz\" target=\"_blank\">Hipo</a>.</p>",
+            "info_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">He is passionate about good design and development methodologies, both on the client side, and behind the curtains. He leads the talented web and mobile development team at <a href=\"http://hipo.biz\" target=\"_blank\">Hipo</a>.</p>",
             "twitter": "taylanpince",
             "github": "http://github.com/taylanpince",
-            "avatar": "http://kod.io/public/images/speakers/taylan-pince.jpg",
+            "avatar": "http://kod.io/public/images/speakers/taylan-pince@2x.jpg",
             "speech_time": "Sat, 26 Oct 2013 12:00:00 +0000",
             "speech_title": "Beyond REST: Mobile Applications and Custom API Protocols",
             "speech_detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Most mobile applications are built on a <a href=\"http://en.wikipedia.org/wiki/Representational_state_transfer\">RESTful</a> API layer that uses standard HTTP for communicating back and forth. In this talk we will take a look at the principles of REST and how to best integrate them in a mobile context.</p><p style=\"font-family:'TisoOT';font-size:16px;\">But then we will take this topic further and explore what kind of specialized API layers can be used with mobile apps, such as custom TCP-based protocols and other purpose-built socket connections that offer more flexibility and live update features.</p>"
@@ -91,10 +91,10 @@
         {
             "name": "Joshua Ballanco",
             "title": "Chief Scientist at Burnside Digital",
-            "info_html": "<p style=\"color:rgb(62, 110, 98);font-family:'Noticia Text', serif;font-size:15px;text-align: center;\">He is a core developer of <a href=\"http://macruby.org/\" target=\"_blank\">MacRuby</a> and <a href=\"http://rubymotion.com/\" target=\"_blank\">Rubymotion</a>. He lives in Ankara/Turkey. He works at <a href=\"http://burnsidedigital.com/\" target=\"_blank\">Burnside Digital</a>.</p>",
+            "info_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">He is a core developer of <a href=\"http://macruby.org/\" target=\"_blank\">MacRuby</a> and <a href=\"http://rubymotion.com/\" target=\"_blank\">Rubymotion</a>. He lives in Ankara/Turkey. He works at <a href=\"http://burnsidedigital.com/\" target=\"_blank\">Burnside Digital</a>.</p>",
             "twitter": "manhattanmetric",
             "github": "http://github.com/jballanc",
-            "avatar": "http://kod.io/public/images/speakers/joshua-ballanco.jpg",
+            "avatar": "http://kod.io/public/images/speakers/joshua-ballanco@2x.jpg",
             "speech_time": "Sat, 26 Oct 2013 14:00:00 +0000",
             "speech_title": "Sure, I could learn Objective-C, but...",
             "speech_detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">If you've heard of RubyMotion, chances are that you've also heard people tell you to \"just learn Objective-C\". In this talk, we'll look at how RubyMotion is so much more than a way to write iOS apps in another language.</p><p style=\"font-family:'TisoOT';font-size:16px;\">Using all the strengths of Ruby, we'll see how RubyMotion can make your code cleaner, easier to read, and more efficient.</p>"
@@ -102,10 +102,10 @@
         {
             "name": "Barış Daylık",
             "title": "CTO at VNGRS",
-            "info_html": "<p style=\"color:rgb(62, 110, 98);font-family:'Noticia Text', serif;font-size:15px;text-align: center;\">He works at <a href=\"http://vngrs.com\" target=\"_blank\">VNGRS</a> as Chief Technology Officer.</p>",
+            "info_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">He works at <a href=\"http://vngrs.com\" target=\"_blank\">VNGRS</a> as Chief Technology Officer.</p>",
             "twitter": "bdaylik",
             "github": "http://github.com/bdaylik",
-            "avatar": "http://kod.io/public/images/speakers/baris-daylik.jpg",
+            "avatar": "http://kod.io/public/images/speakers/baris-daylik@2x.jpg",
             "speech_time": "Sat, 26 Oct 2013 09:40:00 +0000",
             "speech_title": "---",
             "speech_detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">---</p>"
@@ -124,15 +124,15 @@
                 "title": "Main Organizers",
                 "companies": [
                     {
-                        "image": "http://kod.io/public/images/sponsors/koc-inc.png",
+                        "image": "http://kod.io/public/images/sponsors/koc-inc@2x.png",
                         "url": "http://incubation.ku.edu.tr/en/"
                     },
                     {
-                        "image": "http://kod.io/public/images/sponsors/webbox.png",
+                        "image": "http://kod.io/public/images/sponsors/webbox@2x.png",
                         "url": "http://webbox.io/"
                     },
                     {
-                        "image": "http://kod.io/public/images/sponsors/koc-rd.png",
+                        "image": "http://kod.io/public/images/sponsors/koc-rd@2x.png",
                         "url": "http://vprd.ku.edu.tr/rpd/home"
                     }
                 ]
@@ -141,11 +141,11 @@
                 "title": "Gold Sponsors",
                 "companies": [
                     {
-                        "image": "http://kod.io/public/images/sponsors/sadece-hosting.png",
+                        "image": "http://kod.io/public/images/sponsors/sadece-hosting@2x.png",
                         "url": "http://sadecehosting.com/"
                     },
                     {
-                        "image": "http://kod.io/public/images/sponsors/vngrs.png",
+                        "image": "http://kod.io/public/images/sponsors/vngrs@2x.png",
                         "url": "http://vngrs.com/"
                     }
                 ]
@@ -154,15 +154,15 @@
                 "title": "Sponsors",
                 "companies": [
                     {
-                        "image": "http://kod.io/public/images/sponsors/hipo.png",
+                        "image": "http://kod.io/public/images/sponsors/hipo@2x.png",
                         "url": "http://hipo.biz/"
                     },
                     {
-                        "image": "http://kod.io/public/images/sponsors/paylas.png",
+                        "image": "http://kod.io/public/images/sponsors/paylas@2x.png",
                         "url": "http://paylas.com/"
                     },
                     {
-                        "image": "http://kod.io/public/images/sponsors/webrazzi.png",
+                        "image": "http://kod.io/public/images/sponsors/webrazzi@2x.png",
                         "url": "http://webrazzi.com/"
                     }
                 ]
@@ -171,39 +171,39 @@
                 "title": "Supporters",
                 "companies": [
                     {
-                        "image": "http://kod.io/public/images/supporters/tarikkavazcom.png",
+                        "image": "http://kod.io/public/images/supporters/tarikkavazcom@2x.png",
                         "url": "http://tarikkavaz.com/"
                     },
                     {
-                        "image": "http://kod.io/public/images/supporters/devpod.png",
+                        "image": "http://kod.io/public/images/supporters/devpod@2x.png",
                         "url": "http://devpod.tumblr.com/"
                     },
                     {
-                        "image": "http://kod.io/public/images/supporters/sonsuz-dongu.png",
+                        "image": "http://kod.io/public/images/supporters/sonsuz-dongu@2x.png",
                         "url": "http://sonsuzdongu.com/"
                     },
                     {
-                        "image": "http://kod.io/public/images/supporters/koc-gk.jpg",
+                        "image": "http://kod.io/public/images/supporters/koc-gk@2x.jpg",
                         "url": "http://www.kocgirisimcilik.com/"
                     },
                     {
-                        "image": "http://kod.io/public/images/supporters/jstanbul.png",
+                        "image": "http://kod.io/public/images/supporters/jstanbul@2x.png",
                         "url": "http://jstanbul.org/"
                     },
                     {
-                        "image": "http://kod.io/public/images/supporters/valven.png",
+                        "image": "http://kod.io/public/images/supporters/valven@2x.png",
                         "url": "http://www.valven.com/"
                     },
                     {
-                        "image": "http://kod.io/public/images/supporters/venturro.png",
+                        "image": "http://kod.io/public/images/supporters/venturro@2x.png",
                         "url": "http://www.venturro.com/"
                     },
                     {
-                        "image": "http://kod.io/public/images/supporters/ingenious.png",
+                        "image": "http://kod.io/public/images/supporters/ingenious@2x.png",
                         "url": "http://phi.com.tr/"
                     },
                     {
-                        "image": "http://kod.io/public/images/supporters/8digits.png",
+                        "image": "http://kod.io/public/images/supporters/8digits@2x.png",
                         "url": "http://8digits.com/"
                     }
                 ]
