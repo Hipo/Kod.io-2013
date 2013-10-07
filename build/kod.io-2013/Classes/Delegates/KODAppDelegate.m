@@ -17,19 +17,33 @@
 
 static NSTimeInterval const animationStisfactionInterval = 1.0;
 
+@interface KODAppDelegate () {
+    UIWindow *_window;
+}
+
+@end
+
 @implementation KODAppDelegate
+
+-(void)dealloc {
+    [_window release], _window = nil;
+
+    [super dealloc];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    _window.backgroundColor = [UIColor whiteColor];
+    [_window makeKeyAndVisible];
 
     // Controller hierarchy
     // ====================
 
-    KODSplashViewController *splashController = [[KODSplashViewController alloc] initWithNibName:nil
-                                                                                          bundle:nil];
+    KODSplashViewController *splashController = [[[KODSplashViewController alloc]
+                                                  initWithNibName:nil
+                                                  bundle:nil]
+                                                 autorelease];
 
 
     KODSessionsViewController *rootController = [[[KODSessionsViewController alloc]
@@ -40,7 +54,7 @@ static NSTimeInterval const animationStisfactionInterval = 1.0;
                                                       initWithRootViewController:rootController]
                                                      autorelease];
 
-    [self.window setRootViewController:navigationController];
+    [_window setRootViewController:navigationController];
 
     [navigationController presentViewController:splashController
                                        animated:NO

@@ -182,9 +182,84 @@ static CGFloat const kSpeakerTitleTopMargin = 100.0;
 
     _scrollView = [[UIScrollView alloc] initWithFrame:scrollViewFrame];
     [_scrollView setAutoresizingMask:UIViewAutoresizingFlexibleHeight];
+    [_scrollView setContentInset:UIEdgeInsetsMake(0.0, 0.0, 15.0, 0.0)];
     [_scrollView setAlwaysBounceVertical:YES];
 
     [self.contentView addSubview:_scrollView];
+
+    NSMutableParagraphStyle *sectionTitleStyle = [[[NSMutableParagraphStyle alloc] init] autorelease];
+    [sectionTitleStyle setFirstLineHeadIndent:20.0];
+
+    NSAttributedString *bioTitleText = [[[NSAttributedString alloc]
+                                          initWithString:NSLocalizedString(@"Bio", nil)
+                                          attributes:@{ NSParagraphStyleAttributeName: sectionTitleStyle }]
+                                        autorelease];
+
+
+    CGRect bioTitleLabelFrame = CGRectZero;
+    bioTitleLabelFrame.size.width = self.contentView.frame.size.width;
+    bioTitleLabelFrame.size.height = 40.0;
+
+    UILabel *bioTitleLabel = [[[UILabel alloc] initWithFrame:bioTitleLabelFrame] autorelease];
+    [bioTitleLabel setFont:[UIFont fontWithName:@"NoticiaText-Regular" size:15.0]];
+    [bioTitleLabel setTextAlignment:NSTextAlignmentLeft];
+    [bioTitleLabel setTextColor:[UIColor whiteColor]];
+    [bioTitleLabel setBackgroundColor:[UIColor sessionsHeaderBackgroundColor]];
+    [bioTitleLabel setAttributedText:bioTitleText];
+    [_scrollView addSubview:bioTitleLabel];
+
+    NSAttributedString *speechInfoText = [[[NSAttributedString alloc]
+                                           initWithString:NSLocalizedString(@"Speech Info", nil)
+                                           attributes:@{ NSParagraphStyleAttributeName: sectionTitleStyle}]
+                                          autorelease];
+
+    CGRect bioDetailLabelFrame = CGRectZero;
+    bioDetailLabelFrame.origin.x = 20.0;
+    bioDetailLabelFrame.size.width = self.contentView.frame.size.width - (2.0 * bioDetailLabelFrame.origin.x);
+    bioDetailLabelFrame.origin.y = CGRectGetMaxY(bioTitleLabel.frame) + 10.0;
+    bioDetailLabelFrame.size.height = CGFLOAT_MAX;
+
+    NSDictionary *options = @{
+                              DTDefaultFontFamily : @"TisaOT",
+                              DTDefaultFontSize : @(14),
+                              DTDefaultTextColor : [UIColor blackColor],
+                              DTDefaultLinkColor : [UIColor navigationBarColor],
+                              DTDefaultLinkDecoration : @(NO),
+                              DTDefaultLineHeightMultiplier: @(1.3)
+                              };
+
+    DTHTMLAttributedStringBuilder *bioDetailBuilder = [[[DTHTMLAttributedStringBuilder  alloc]
+                                                           initWithHTML:[_session.speakerBio dataUsingEncoding:NSUTF8StringEncoding]
+                                                           options:options
+                                                           documentAttributes:nil] autorelease];
+
+	DTAttributedTextContentView *bioDetailView = [[DTAttributedTextContentView alloc] initWithFrame:bioDetailLabelFrame];
+    [bioDetailView setDelegate:self];
+
+    [bioDetailView setBackgroundColor:[UIColor clearColor]];
+    [bioDetailView setAttributedString:bioDetailBuilder.generatedAttributedString];
+    [bioDetailView sizeToFit];
+
+    bioDetailLabelFrame = bioDetailView.frame;
+    bioDetailLabelFrame.origin.x = 20.0;
+    bioDetailLabelFrame.origin.y = CGRectGetMaxY(bioTitleLabel.frame) + 10.0;
+    [bioDetailView setFrame:bioDetailLabelFrame];
+
+    [_scrollView addSubview:bioDetailView];
+
+
+    CGRect speechInfoLabelFrame = CGRectZero;
+    speechInfoLabelFrame.size.width = self.contentView.frame.size.width;
+    speechInfoLabelFrame.size.height = 40.0;
+    speechInfoLabelFrame.origin.y = CGRectGetMaxY(bioDetailLabelFrame) + 15.0;
+
+    UILabel *speechInfoLabel = [[[UILabel alloc] initWithFrame:speechInfoLabelFrame] autorelease];
+    [speechInfoLabel setFont:[UIFont fontWithName:@"NoticiaText-Regular" size:15.0]];
+    [speechInfoLabel setTextAlignment:NSTextAlignmentLeft];
+    [speechInfoLabel setTextColor:[UIColor whiteColor]];
+    [speechInfoLabel setBackgroundColor:[UIColor sessionsHeaderBackgroundColor]];
+    [speechInfoLabel setAttributedText:speechInfoText];
+    [_scrollView addSubview:speechInfoLabel];
 
     CGRect titleLabelFrame = CGRectZero;
     titleLabelFrame.origin.x = 20.0;
@@ -199,12 +274,13 @@ static CGFloat const kSpeakerTitleTopMargin = 100.0;
     [titleLabel setFont:[UIFont fontWithName:@"TisaOT-Medi" size:19.0]];
     [titleLabel setText:_session.speechTitle];
 
-    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
+    NSMutableParagraphStyle *style = [[[NSMutableParagraphStyle alloc] init] autorelease];
     [style setLineHeightMultiple:0.8];
 
-    NSAttributedString *speechTitle = [[NSAttributedString alloc]
+    NSAttributedString *speechTitle = [[[NSAttributedString alloc]
                                        initWithString:_session.speechTitle
-                                       attributes:@{ NSParagraphStyleAttributeName: style }];
+                                       attributes:@{ NSParagraphStyleAttributeName: style }]
+                                       autorelease];
 
     [titleLabel setAttributedText:speechTitle];
     [_scrollView addSubview:titleLabel];
@@ -212,11 +288,11 @@ static CGFloat const kSpeakerTitleTopMargin = 100.0;
     [titleLabel sizeToFit];
 
     titleLabelFrame = titleLabel.frame;
-    titleLabelFrame.origin.y = 15.0;
+    titleLabelFrame.origin.y = CGRectGetMaxY(speechInfoLabel.frame) + 15.0;
     [titleLabel setFrame:titleLabelFrame];
 
     CGRect timeLabelFrame = CGRectZero;
-    timeLabelFrame.size.width = 50.0;
+    timeLabelFrame.size.width = 70.0;
     timeLabelFrame.size.height = 20.0;
     timeLabelFrame.origin.y = CGRectGetMinY(titleLabelFrame);
     timeLabelFrame.origin.x = self.contentView.frame.size.width - 20.0 - timeLabelFrame.size.width;
@@ -236,25 +312,16 @@ static CGFloat const kSpeakerTitleTopMargin = 100.0;
     speechDetailLabelFrame.size.height = CGFLOAT_MAX;
 
 
-    NSDictionary *options = @{
-                              DTDefaultFontFamily : @"TisaOT",
-                              DTDefaultFontSize : @(14),
-                              DTDefaultTextColor : [UIColor blackColor],
-                              DTDefaultLinkColor : [UIColor navigationBarColor],
-                              DTDefaultLinkDecoration : @(NO),
-                              DTDefaultLineHeightMultiplier: @(1.3)
-                              };
-
-    DTHTMLAttributedStringBuilder *builder = [[[DTHTMLAttributedStringBuilder  alloc]
-                                              initWithHTML:[_session.speechDetail dataUsingEncoding:NSUTF8StringEncoding]
-                                              options:options
-                                              documentAttributes:nil] autorelease];
+    DTHTMLAttributedStringBuilder *speechDetailBuilder = [[[DTHTMLAttributedStringBuilder  alloc]
+                                                           initWithHTML:[_session.speechDetail dataUsingEncoding:NSUTF8StringEncoding]
+                                                           options:options
+                                                           documentAttributes:nil] autorelease];
 
 	DTAttributedTextContentView *speechDetailView = [[DTAttributedTextContentView alloc] initWithFrame:speechDetailLabelFrame];
     [speechDetailView setDelegate:self];
 
     [speechDetailView setBackgroundColor:[UIColor clearColor]];
-    [speechDetailView setAttributedString:builder.generatedAttributedString];
+    [speechDetailView setAttributedString:speechDetailBuilder.generatedAttributedString];
     [speechDetailView sizeToFit];
 
     speechDetailLabelFrame = speechDetailView.frame;
@@ -280,7 +347,7 @@ static CGFloat const kSpeakerTitleTopMargin = 100.0;
           forControlEvents:UIControlEventTouchUpInside];
      [backButton sizeToFit];
 
-     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+     UIBarButtonItem *item = [[[UIBarButtonItem alloc] initWithCustomView:backButton] autorelease];
      [self.navigationItem setLeftBarButtonItem:item animated:YES];
 }
 

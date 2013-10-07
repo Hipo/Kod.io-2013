@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 kod.io. All rights reserved.
 //
 
-#import <MapKit/MapKit.h>
-
 #import "KODInfoViewController.h"
 #import "KODDataManager.h"
 #import "KODOrganizer.h"
@@ -38,7 +36,7 @@
 
 static CGFloat const kTitleLabelHeight = 40.0;
 static CGFloat const kMapViewHeight = 180.0;
-static CGFloat const kInfoLabelHeight = 115.0;
+static CGFloat const kInfoLabelHeight = 100.0;
 static NSString * const kInfoViewControllerImageLoadIdentifier;
 
 @implementation KODInfoViewController
@@ -148,11 +146,13 @@ static NSString * const kInfoViewControllerImageLoadIdentifier;
     MKCoordinateRegion region = MKCoordinateRegionMake(_location, _span);
 
     MKMapView *mapView = [[[MKMapView alloc] initWithFrame:mapViewFrame] autorelease];
+    [mapView setDelegate:self];
     [mapView setRegion:region];
     [headerView addSubview:mapView];
 
     MKPointAnnotation *annotation = [[[MKPointAnnotation alloc] init] autorelease];
     [annotation setCoordinate:_location];
+    [annotation setTitle:[dataManager.info nonNullValueForKey:@"title"]];
     [mapView addAnnotation:annotation];
 
     headerViewFrame = CGRectUnion(headerViewFrame, mapViewFrame);
@@ -160,7 +160,7 @@ static NSString * const kInfoViewControllerImageLoadIdentifier;
     CGRect infoLabelFrame = CGRectZero;
     infoLabelFrame.size.width = self.contentView.frame.size.width;
     infoLabelFrame.size.height = kInfoLabelHeight;
-    infoLabelFrame.origin.y = CGRectGetMaxY(mapViewFrame);
+    infoLabelFrame.origin.y = CGRectGetMaxY(mapViewFrame) + 20.0;
 
     NSDictionary *options = @{
                               DTDefaultFontFamily : @"TisaOT",
@@ -202,7 +202,7 @@ static NSString * const kInfoViewControllerImageLoadIdentifier;
          forControlEvents:UIControlEventTouchUpInside];
     [backButton sizeToFit];
 
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    UIBarButtonItem *item = [[[UIBarButtonItem alloc] initWithCustomView:backButton] autorelease];
     [self.navigationItem setRightBarButtonItem:item animated:YES];
 }
 
@@ -288,6 +288,8 @@ static NSString * const kInfoViewControllerImageLoadIdentifier;
     KODOrganizer *organizer = [[_organizerGroups objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
 
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:organizer.linkURL]];
+
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 - (void)tableView:(UITableView *)tableView
@@ -315,6 +317,45 @@ didEndEditingRowAtIndexPath:(NSIndexPath *)indexPath {
 - (void)didTapUserButton:(id)sender {
     [self.delegate modalViewControllerDidDismiss:self];
 }
+
+#pragma mark - MKMapViewDelegate
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
+    static NSString * const Identifier = @"Identifier";
+
+    if ([annotation isKindOfClass:[MKPointAnnotation class]]) {
+        MKPinAnnotationView *view = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:Identifier];
+
+        if (nil == view) {
+            view = [[[MKPinAnnotationView alloc]
+                     initWithAnnotation:annotation
+                     reuseIdentifier:Identifier] autorelease];
+        } else {
+            [view setAnnotation:annotation];
+        }
+
+        [view setCanShowCallout:YES];
+
+        UIButton *callout = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        [view setRightCalloutAccessoryView:callout];
+        
+        return view;
+    }
+
+    return nil;
+}
+
+- (void)mapView:(MKMapView *)mapView
+ annotationView:(MKAnnotationView *)view
+calloutAccessoryControlTapped:(UIControl *)control {
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://maps.apple.com/?q=%f,%f&spn=%f,%f",
+                                       _location.latitude, _location.longitude,
+                                       _span.latitudeDelta, _span.longitudeDelta]];
+
+    [[UIApplication sharedApplication] openURL:url];
+}
+
+
 
 
 

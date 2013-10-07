@@ -3,7 +3,7 @@
         {
             "name": "Chris Stephenson",
             "title": "",
-            "info_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Wrote his first operating system, in assembler language, for IBM in 1967. Built Turkey's first university Department of Computer Science (<em>now closed</em>). Likes functional programming and writing the tests before writing the program.</p>",
+            "bio_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Wrote his first operating system, in assembler language, for IBM in 1967. Built Turkey's first university Department of Computer Science (<em>now closed</em>). Likes functional programming and writing the tests before writing the program.</p>",
             "twitter": "chrisjstephensn",
             "github": "",
             "avatar": "http://kod.io/public/images/speakers/chris-stephenson@2x.jpg",
@@ -14,7 +14,7 @@
         {
             "name": "Mattt Thompson",
             "title": "Mobile Lead at Heroku",
-            "info_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Mobile Lead at <a href=\"http://heroku.com\" target=\"_blank\">Heroku</a>, and the creator &amp; maintainer of <a href=\"http://afnetworking.com/\" target=\"_blank\">AFNetworking</a> and other popularopen-source projects, including <a href=\"http://postgresapp.com/\" target=\"_blank\">Postgres.app</a>, <a hef=\"http://helios.io/\" target=\"_blank\">Helios</a>, &amp; <a href=\"http://nomad-cli.com/\" target=\"_blank\">Nomad</a>. He also writes about obscure &amp; overlooked parts of Cocoa on <a href=\"http://nshipster.com\" target=\"_blank\">NSHipster</a>.</                                                                                                                                                                                                                                                                                                                                                                                                                                                                       </p>",
+            "bio_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Mobile Lead at <a href=\"http://heroku.com\" target=\"_blank\">Heroku</a>, and the creator &amp; maintainer of <a href=\"http://afnetworking.com/\" target=\"_blank\">AFNetworking</a> and other popularopen-source projects, including <a href=\"http://postgresapp.com/\" target=\"_blank\">Postgres.app</a>, <a hef=\"http://helios.io/\" target=\"_blank\">Helios</a>, &amp; <a href=\"http://nomad-cli.com/\" target=\"_blank\">Nomad</a>. He also writes about obscure &amp; overlooked parts of Cocoa on <a href=\"http://nshipster.com\" target=\"_blank\">NSHipster</a>.</                                                                                                                                                                                                                                                                                                                                                                                                                                                                       </p>",
             "twitter": "mattt",
             "github": "http://github.com/mattt",
             "avatar": "http://kod.io/public/images/speakers/mattt-thompson@2x.jpg",
@@ -25,7 +25,7 @@
         {
             "name": "Sinan Yaşar",
             "title": "UI/UX General at Koding.com",
-            "info_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Co-Founder and UI General of <a href=\"http://koding.com\" target=\"_blank\">Koding.com</a> platform. He is also UX Engineer and developer at <a href=\"http://koding.com\" target=\"_blank\">Koding.com</a></p>",
+            "bio_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Co-Founder and UI General of <a href=\"http://koding.com\" target=\"_blank\">Koding.com</a> platform. He is also UX Engineer and developer at <a href=\"http://koding.com\" target=\"_blank\">Koding.com</a></p>",
             "twitter": "sinanyasar",
             "github": "http://github.com/sinanyasar",
             "avatar": "http://kod.io/public/images/speakers/sinan-yasar@2x.jpg",
@@ -36,7 +36,7 @@
         {
             "name": "Blake Mizerany",
             "title": "Freelance Engineer",
-            "info_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Creator of Ruby web framework <a href=\"http://sinatrarb.com\" target=\"_blank\">Sinatra</a>. He worked as Researcher, Developer and Distributed Systems Architect at Heroku. Ruby, Erlang and C programmer.</p>",
+            "bio_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Creator of Ruby web framework <a href=\"http://sinatrarb.com\" target=\"_blank\">Sinatra</a>. He worked as Researcher, Developer and Distributed Systems Architect at Heroku. Ruby, Erlang and C programmer.</p>",
             "twitter": "bmizerany",
             "github": "http://github.com/bmizerany",
             "avatar": "http://kod.io/public/images/speakers/blake-mizerany@2x.jpg",
@@ -47,7 +47,7 @@
         {
             "name": "Andrew Gerrand",
             "title": "Software Engineer at Google",
-            "info_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">We works at <a href=\"https://www.google.com.au/\" target=\"_blank\">Google Sydney</a> on the <a href=\"http://golang.org/\" target=\"_blank\">Go Programming Language</a>.</p>",
+            "bio_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">We works at <a href=\"https://www.google.com.au/\" target=\"_blank\">Google Sydney</a> on the <a href=\"http://golang.org/\" target=\"_blank\">Go Programming Language</a>.</p>",
             "twitter": "enneff",
             "github": "http://github.com/nf",
             "avatar": "http://kod.io/public/images/speakers/andrew-gerrand@2x.jpg",
@@ -58,7 +58,7 @@
         {
             "name": "Cihan Okyay",
             "title": "Software Developer at Koding.com",
-            "info_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">He works at <a href=\"http://koding.com\" target=\"_blank\">Koding.com</a> as software developer.</p>",
+            "bio_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">He works at <a href=\"http://koding.com\" target=\"_blank\">Koding.com</a> as software developer.</p>",
             "twitter": "cihann",
             "github": "http://github.com/cihann",
             "avatar": "http://kod.io/public/images/speakers/cihan-okyay@2x.jpg",
@@ -69,7 +69,7 @@
         {
             "name": "Mark Bates",
             "title": "Architect at Meta42 Labs",
-            "info_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Founder and chief architect of the <a href=\"http://metacasts.tv\" target=\"_blank\">Meta42 Labs</a>. In 2009 Mark’s first book, “<a href=\"http://www.amazon.com/gp/product/0321638360?ie=UTF8&amp;tag=groupgiftlist-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321638360\" target=\"_blank\">Distributed Programming with Ruby</a>”, was published by Addison-Wesley. In 2012 Addison-Wesley published Mark’s second book, “<a href=\"http://www.amazon.com/gp/product/032182010X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;tag=groupgiftlist-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=032182010X\" target=\"_blank\">Programming in CoffeeScript</a>”.</p>",
+            "bio_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Founder and chief architect of the <a href=\"http://metacasts.tv\" target=\"_blank\">Meta42 Labs</a>. In 2009 Mark’s first book, “<a href=\"http://www.amazon.com/gp/product/0321638360?ie=UTF8&amp;tag=groupgiftlist-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321638360\" target=\"_blank\">Distributed Programming with Ruby</a>”, was published by Addison-Wesley. In 2012 Addison-Wesley published Mark’s second book, “<a href=\"http://www.amazon.com/gp/product/032182010X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;tag=groupgiftlist-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=032182010X\" target=\"_blank\">Programming in CoffeeScript</a>”.</p>",
             "twitter": "markbates",
             "github": "http://github.com/markbates",
             "avatar": "http://kod.io/public/images/speakers/mark-bates@2x.jpg",
@@ -80,7 +80,7 @@
         {
             "name": "Taylan Pinçe",
             "title": "Tech Lead at Hipo",
-            "info_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">He is passionate about good design and development methodologies, both on the client side, and behind the curtains. He leads the talented web and mobile development team at <a href=\"http://hipo.biz\" target=\"_blank\">Hipo</a>.</p>",
+            "bio_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">He is passionate about good design and development methodologies, both on the client side, and behind the curtains. He leads the talented web and mobile development team at <a href=\"http://hipo.biz\" target=\"_blank\">Hipo</a>.</p>",
             "twitter": "taylanpince",
             "github": "http://github.com/taylanpince",
             "avatar": "http://kod.io/public/images/speakers/taylan-pince@2x.jpg",
@@ -91,7 +91,7 @@
         {
             "name": "Joshua Ballanco",
             "title": "Chief Scientist at Burnside Digital",
-            "info_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">He is a core developer of <a href=\"http://macruby.org/\" target=\"_blank\">MacRuby</a> and <a href=\"http://rubymotion.com/\" target=\"_blank\">Rubymotion</a>. He lives in Ankara/Turkey. He works at <a href=\"http://burnsidedigital.com/\" target=\"_blank\">Burnside Digital</a>.</p>",
+            "bio_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">He is a core developer of <a href=\"http://macruby.org/\" target=\"_blank\">MacRuby</a> and <a href=\"http://rubymotion.com/\" target=\"_blank\">Rubymotion</a>. He lives in Ankara/Turkey. He works at <a href=\"http://burnsidedigital.com/\" target=\"_blank\">Burnside Digital</a>.</p>",
             "twitter": "manhattanmetric",
             "github": "http://github.com/jballanc",
             "avatar": "http://kod.io/public/images/speakers/joshua-ballanco@2x.jpg",
@@ -102,7 +102,7 @@
         {
             "name": "Barış Daylık",
             "title": "CTO at VNGRS",
-            "info_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">He works at <a href=\"http://vngrs.com\" target=\"_blank\">VNGRS</a> as Chief Technology Officer.</p>",
+            "bio_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">He works at <a href=\"http://vngrs.com\" target=\"_blank\">VNGRS</a> as Chief Technology Officer.</p>",
             "twitter": "bdaylik",
             "github": "http://github.com/bdaylik",
             "avatar": "http://kod.io/public/images/speakers/baris-daylik@2x.jpg",
@@ -118,6 +118,7 @@
             "span": { "lat": 0.010987, "long": 0.022724}
         },
         "title": "Koç Üniversitesi",
+        "detail": "Koç Üniversitesi Hemşirelik Yüksekokulu Güzelbahçe Sokak No: 20 Nişantaşı 34365 İstanbul",
         "detail_html": "<p style=\"font-family:'TisoOT-Medi';font-size:22px;text-align:center;color:#ed582a;margin-top:20px;margin-bot:10px;\">Koç Üniversitesi</p><p style=\"font-family:'TisoOT';font-size:14px;text-align: center;\">Hemşirelik Yüksek Okulu<br />Güzelbahçe Sokak No. 20, Nişantaşı<br />34365 - İstanbul - Türkiye</p>",
         "organizers": [
             {
