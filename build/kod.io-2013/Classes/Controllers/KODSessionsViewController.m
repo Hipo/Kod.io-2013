@@ -109,7 +109,11 @@ static NSString * const KODSessionsViewControllerRequestIdentifier = @"KODSessio
      setNavigationBarHidden:NO
      animated:animated];
 
+    for (NSIndexPath *indexPath in [_tableView indexPathsForSelectedRows]) {
+        [_tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
 }
+
 
 #pragma mark - UITableViewDelegate, UITableViewDataSource
 
@@ -159,12 +163,12 @@ static NSString * const KODSessionsViewControllerRequestIdentifier = @"KODSessio
     {
         CGRect viewFrame = CGRectZero;
         viewFrame.origin.x = CGRectGetMaxX(clockView.frame) + 5.0;
-        viewFrame.origin.y = clockView.frame.origin.y;
+        viewFrame.origin.y = clockView.frame.origin.y - 1.0;
         viewFrame.size.height = clockView.frame.size.height;
         viewFrame.size.width = headerView.frame.size.width - viewFrame.origin.x - 10.0;
 
         UILabel *headerLabel = [[[UILabel alloc] initWithFrame:viewFrame] autorelease];
-        [headerLabel setFont:[UIFont fontWithName:@"NoticiaText-Regular" size:13.0]];
+        [headerLabel setFont:[UIFont fontWithName:@"NoticiaText-Regular" size:12.0]];
         [headerLabel setBackgroundColor:[UIColor clearColor]];
         [headerLabel setTextColor:[UIColor whiteColor]];
         [headerLabel setText:[self tableView:tableView titleForHeaderInSection:section]];

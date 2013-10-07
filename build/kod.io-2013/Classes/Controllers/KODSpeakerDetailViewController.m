@@ -12,7 +12,6 @@
 
 #import "UIColor+Kodio.h"
 #import "UIView+CircularMask.h"
-#import "TTTAttributedLabel.h"
 
 #import <DTCoreText/DTCoreText.h>
 
@@ -183,6 +182,7 @@ static CGFloat const kSpeakerTitleTopMargin = 100.0;
 
     _scrollView = [[UIScrollView alloc] initWithFrame:scrollViewFrame];
     [_scrollView setAutoresizingMask:UIViewAutoresizingFlexibleHeight];
+    [_scrollView setAlwaysBounceVertical:YES];
 
     [self.contentView addSubview:_scrollView];
 
@@ -198,17 +198,27 @@ static CGFloat const kSpeakerTitleTopMargin = 100.0;
     [titleLabel setTextAlignment:NSTextAlignmentLeft];
     [titleLabel setFont:[UIFont fontWithName:@"TisaOT-Medi" size:19.0]];
     [titleLabel setText:_session.speechTitle];
+
+    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
+    [style setLineHeightMultiple:0.8];
+
+    NSAttributedString *speechTitle = [[NSAttributedString alloc]
+                                       initWithString:_session.speechTitle
+                                       attributes:@{ NSParagraphStyleAttributeName: style }];
+
+    [titleLabel setAttributedText:speechTitle];
     [_scrollView addSubview:titleLabel];
 
     [titleLabel sizeToFit];
 
     titleLabelFrame = titleLabel.frame;
+    titleLabelFrame.origin.y = 15.0;
     [titleLabel setFrame:titleLabelFrame];
 
     CGRect timeLabelFrame = CGRectZero;
     timeLabelFrame.size.width = 50.0;
     timeLabelFrame.size.height = 20.0;
-    timeLabelFrame.origin.y = roundf((titleLabelFrame.size.height - timeLabelFrame.size.height) / 2.0);
+    timeLabelFrame.origin.y = CGRectGetMinY(titleLabelFrame);
     timeLabelFrame.origin.x = self.contentView.frame.size.width - 20.0 - timeLabelFrame.size.width;
 
     UILabel *timeLabel = [[[UILabel alloc] initWithFrame:timeLabelFrame] autorelease];
@@ -229,7 +239,10 @@ static CGFloat const kSpeakerTitleTopMargin = 100.0;
     NSDictionary *options = @{
                               DTDefaultFontFamily : @"TisaOT",
                               DTDefaultFontSize : @(14),
-                              DTDefaultTextColor : [UIColor blackColor]
+                              DTDefaultTextColor : [UIColor blackColor],
+                              DTDefaultLinkColor : [UIColor navigationBarColor],
+                              DTDefaultLinkDecoration : @(NO),
+                              DTDefaultLineHeightMultiplier: @(1.3)
                               };
 
     DTHTMLAttributedStringBuilder *builder = [[[DTHTMLAttributedStringBuilder  alloc]

@@ -19,8 +19,8 @@
             "github": "http://github.com/mattt",
             "avatar": "http://kod.io/public/images/speakers/mattt-thompson.jpg",
             "speech_time": "Sat, 26 Oct 2013 17:58:28 +0000",
-            "speech_title": "---",
-            "speech_detail_html": "---"
+            "speech_title": "Building Next-Generation iOS Apps with AFNetworking 2.0",
+            "speech_detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">AFNetworking is a delightful open source Objective-C framework for communicating between the client and server. Find out how it's recent 2.0 release can be used to build next-generation iOS 7 apps with real-time functionality, offline support, and background capabilities.</p>"
         },
         {
             "name": "Sinan Yaşar",

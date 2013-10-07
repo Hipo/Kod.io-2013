@@ -240,13 +240,7 @@ static NSString * const kInfoViewControllerImageLoadIdentifier;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UIImage *image = [_imageCache objectForKey:indexPath];
-
-    if (nil != image) {
-        return image.size.height + 40.0;
-    } else {
-        return 40.0;
-    }
+    return 100.0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -268,7 +262,7 @@ static NSString * const kInfoViewControllerImageLoadIdentifier;
         [[HPRequestManager sharedManager] loadImageAtURL:organizer.imageURL
                                            withIndexPath:indexPath
                                               identifier:kInfoViewControllerImageLoadIdentifier
-                                              scaleToFit:CGSizeMake(tableView.frame.size.width - 20.0, 100.0)
+                                              scaleToFit:CGSizeMake(tableView.frame.size.width - 100.0, 100.0)
                                              contentMode:UIViewContentModeScaleAspectFit
                                          completionBlock:^(id resource, NSError *error) {
                                              if (nil == error) {

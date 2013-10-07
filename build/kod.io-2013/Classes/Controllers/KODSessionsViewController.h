@@ -10,6 +10,7 @@
 
 @class KODDataManager;
 
-@interface KODSessionsViewController : KODBaseViewController <UITableViewDataSource, UITableViewDelegate>
+@interface KODSessionsViewController : KODBaseViewController
+<UITableViewDataSource, UITableViewDelegate, KODModalViewControllerDelegate>
 
 @end

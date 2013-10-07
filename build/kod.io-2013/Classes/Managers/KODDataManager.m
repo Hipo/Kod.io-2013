@@ -11,7 +11,7 @@
 #import "KODSession.h"
 #import <HPUtils/JSONKit.h>
 
-//#define KOD_USELOCALDATA
+//#define KOD_USELOCALDATA YES
 
 @interface KODDataManager () {
 @private

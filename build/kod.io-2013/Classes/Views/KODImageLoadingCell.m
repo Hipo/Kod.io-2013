@@ -41,7 +41,7 @@
         [_activityIndicatorView stopAnimating];
     }
 
-    CGRect imageViewFrame = CGRectInset(self.contentView.frame, 20.0, 20.0);
+    CGRect imageViewFrame = CGRectInset(self.contentView.frame, 50.0, 20.0);
     [self.imageView setFrame:imageViewFrame];
     [self.imageView setContentMode:UIViewContentModeScaleAspectFit];
     [self.detailTextLabel setHidden:YES];

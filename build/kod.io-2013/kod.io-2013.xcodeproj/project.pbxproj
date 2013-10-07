@@ -58,7 +58,6 @@
 		B94CF03017F33CE8001E188B /* KODSpeakerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B94CF02F17F33CE8001E188B /* KODSpeakerDetailViewController.m */; };
 		B94CF03317F34793001E188B /* im-back.png in Resources */ = {isa = PBXBuildFile; fileRef = B94CF03117F34793001E188B /* im-back.png */; };
 		B94CF03417F34793001E188B /* im-back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B94CF03217F34793001E188B /* im-back@2x.png */; };
-		B94CF03817F3482F001E188B /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B94CF03717F3482F001E188B /* TTTAttributedLabel.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		B94CF03A17F34C49001E188B /* TisaOT-Medi.otf in Resources */ = {isa = PBXBuildFile; fileRef = B94CF03917F34C49001E188B /* TisaOT-Medi.otf */; };
 		B94CF03C17F34F4E001E188B /* TisaOT.otf in Resources */ = {isa = PBXBuildFile; fileRef = B94CF03B17F34F4E001E188B /* TisaOT.otf */; };
 		B94CF04117F35282001E188B /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94CF04017F35282001E188B /* ImageIO.framework */; };
@@ -155,8 +154,6 @@
 		B94CF02F17F33CE8001E188B /* KODSpeakerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KODSpeakerDetailViewController.m; sourceTree = "<group>"; };
 		B94CF03117F34793001E188B /* im-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "im-back.png"; sourceTree = "<group>"; };
 		B94CF03217F34793001E188B /* im-back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "im-back@2x.png"; sourceTree = "<group>"; };
-		B94CF03617F3482F001E188B /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
-		B94CF03717F3482F001E188B /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
 		B94CF03917F34C49001E188B /* TisaOT-Medi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TisaOT-Medi.otf"; sourceTree = "<group>"; };
 		B94CF03B17F34F4E001E188B /* TisaOT.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TisaOT.otf; sourceTree = "<group>"; };
 		B94CF04017F35282001E188B /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -350,7 +347,6 @@
 			isa = PBXGroup;
 			children = (
 				B94CF05C17F355EF001E188B /* DTCoreText.framework */,
-				B94CF03517F3482F001E188B /* TTTAttributedLabel */,
 				B94CEFF817F2F127001E188B /* HPUtils.framework */,
 			);
 			path = Dependencies;
@@ -384,15 +380,6 @@
 				B94CF02917F3362E001E188B /* NoticiaText-Regular.ttf */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		B94CF03517F3482F001E188B /* TTTAttributedLabel */ = {
-			isa = PBXGroup;
-			children = (
-				B94CF03617F3482F001E188B /* TTTAttributedLabel.h */,
-				B94CF03717F3482F001E188B /* TTTAttributedLabel.m */,
-			);
-			path = TTTAttributedLabel;
 			sourceTree = "<group>";
 		};
 		B95F856217F1B95E003ECD55 /* Images */ = {
@@ -565,7 +552,6 @@
 				B957277E17F09B4F00ED5088 /* KODAppDelegate.m in Sources */,
 				B95F855517F1A1F8003ECD55 /* KODBaseViewController.m in Sources */,
 				B94CEFFE17F315CE001E188B /* KODSessionsViewController.m in Sources */,
-				B94CF03817F3482F001E188B /* TTTAttributedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,7 +635,6 @@
 		B957277917F09A4200ED5088 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Hippo Foundry Inc. (W9875NV3WF)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hippo Foundry Inc. (W9875NV3WF)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -668,7 +653,6 @@
 					"$(SRCROOT)/Dependencies/DTCoreText.framework",
 				);
 				INFOPLIST_FILE = Sources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/cemaleker/Hipo/kod.io/build/kod.io-2013/Dependencies/TestFlight",
@@ -682,7 +666,6 @@
 		B957277A17F09A4200ED5088 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Hippo Foundry Inc. (W9875NV3WF)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hippo Foundry Inc. (W9875NV3WF)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -697,7 +680,6 @@
 					"$(SRCROOT)/Dependencies/DTCoreText.framework",
 				);
 				INFOPLIST_FILE = Sources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/cemaleker/Hipo/kod.io/build/kod.io-2013/Dependencies/TestFlight",
