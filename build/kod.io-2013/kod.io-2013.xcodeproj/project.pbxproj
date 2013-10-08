@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B91C734F18043FF300F2AF22 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B91C734918043FF300F2AF22 /* libTestFlight.a */; };
+		B91C735018043FF300F2AF22 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B91C734A18043FF300F2AF22 /* README.md */; };
+		B91C735118043FF300F2AF22 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = B91C734B18043FF300F2AF22 /* release_notes.md */; };
+		B91C73531804404A00F2AF22 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B91C73521804404A00F2AF22 /* libz.dylib */; };
 		B93009BB17F998E200C08752 /* KODInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B93009BA17F998E200C08752 /* KODInfoViewController.m */; };
 		B93009BD17F99A9F00C08752 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B93009BC17F99A9F00C08752 /* MapKit.framework */; };
 		B93009C017FADEA100C08752 /* KODOrganizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B93009BF17FADEA100C08752 /* KODOrganizer.m */; };
@@ -93,6 +97,13 @@
 		B91AD92C17F08F0B00B31993 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B91AD92D17F08F0B00B31993 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B91AD92E17F08F0B00B31993 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		B91C734918043FF300F2AF22 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		B91C734A18043FF300F2AF22 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		B91C734B18043FF300F2AF22 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		B91C734C18043FF300F2AF22 /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
+		B91C734D18043FF300F2AF22 /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
+		B91C734E18043FF300F2AF22 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		B91C73521804404A00F2AF22 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		B93009B917F998E200C08752 /* KODInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KODInfoViewController.h; sourceTree = "<group>"; };
 		B93009BA17F998E200C08752 /* KODInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KODInfoViewController.m; sourceTree = "<group>"; };
 		B93009BC17F99A9F00C08752 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -181,8 +192,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B91C73531804404A00F2AF22 /* libz.dylib in Frameworks */,
 				B93009BD17F99A9F00C08752 /* MapKit.framework in Frameworks */,
 				B94CF04317F352B2001E188B /* libxml2.dylib in Frameworks */,
+				B91C734F18043FF300F2AF22 /* libTestFlight.a in Frameworks */,
 				B94CF04117F35282001E188B /* ImageIO.framework in Frameworks */,
 				B957275517F09A4200ED5088 /* CoreGraphics.framework in Frameworks */,
 				B94CF00017F31909001E188B /* CoreLocation.framework in Frameworks */,
@@ -220,6 +233,7 @@
 		B91AD8F117F05C7A00B31993 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B91C73521804404A00F2AF22 /* libz.dylib */,
 				B93009BC17F99A9F00C08752 /* MapKit.framework */,
 				B94CF04217F352B2001E188B /* libxml2.dylib */,
 				B94CF04017F35282001E188B /* ImageIO.framework */,
@@ -346,10 +360,24 @@
 		B91AD92F17F08F0B00B31993 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				B91C734818043FF300F2AF22 /* TestFlight */,
 				B94CF05C17F355EF001E188B /* DTCoreText.framework */,
 				B94CEFF817F2F127001E188B /* HPUtils.framework */,
 			);
 			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		B91C734818043FF300F2AF22 /* TestFlight */ = {
+			isa = PBXGroup;
+			children = (
+				B91C734918043FF300F2AF22 /* libTestFlight.a */,
+				B91C734A18043FF300F2AF22 /* README.md */,
+				B91C734B18043FF300F2AF22 /* release_notes.md */,
+				B91C734C18043FF300F2AF22 /* TestFlight+AsyncLogging.h */,
+				B91C734D18043FF300F2AF22 /* TestFlight+ManualSessions.h */,
+				B91C734E18043FF300F2AF22 /* TestFlight.h */,
+			);
+			path = TestFlight;
 			sourceTree = "<group>";
 		};
 		B94CEFF117F2ED92001E188B /* Managers */ = {
@@ -502,6 +530,7 @@
 				B934CE3E17F48DFC009B8F3B /* AppIcon29x29.png in Resources */,
 				B934CE4217F48DFC009B8F3B /* AppIcon60x60.png in Resources */,
 				B934CE6E17F49B5F009B8F3B /* Icon-Small.png in Resources */,
+				B91C735118043FF300F2AF22 /* release_notes.md in Resources */,
 				B95F857017F1DE92003ECD55 /* splash-overlay.png in Resources */,
 				B94CF02217F31FDC001E188B /* im-logo@2x.png in Resources */,
 				B934CE6A17F49B5F009B8F3B /* Icon-72.png in Resources */,
@@ -523,6 +552,7 @@
 				B94CF03317F34793001E188B /* im-back.png in Resources */,
 				B934CE3F17F48DFC009B8F3B /* AppIcon29x29@2x.png in Resources */,
 				B934CE4617F48DFC009B8F3B /* iTunesArtwork@2x.png in Resources */,
+				B91C735018043FF300F2AF22 /* README.md in Resources */,
 				B94CF03417F34793001E188B /* im-back@2x.png in Resources */,
 				B94CF01F17F31FDC001E188B /* im-clock@2x.png in Resources */,
 				B934CE6F17F49B5F009B8F3B /* Icon-Small@2x.png in Resources */,

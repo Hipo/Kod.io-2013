@@ -12,6 +12,7 @@
 #import "KODSplashViewController.h"
 #import "KODSessionsViewController.h"
 #import "KODDataManager.h"
+#import "TestFlight.h"
 
 #import "UIColor+Kodio.h"
 
@@ -32,6 +33,9 @@ static NSTimeInterval const animationStisfactionInterval = 1.0;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+    [TestFlight setDeviceIdentifier:[[[UIDevice currentDevice] identifierForVendor] UUIDString]];
+    [TestFlight takeOff:@"31f2973a-ebcb-49a5-9df6-eaf7141a7297"];
 
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     _window.backgroundColor = [UIColor whiteColor];
