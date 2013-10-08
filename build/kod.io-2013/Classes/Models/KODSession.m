@@ -53,8 +53,11 @@
     self = [self init];
 
     if (nil != self) {
+        NSLocale *usLocale = [NSLocale localeWithLocaleIdentifier:@"en_US"];
+
         NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
         [formatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss Z"]; //RFC2822-Format
+        [formatter setLocale:usLocale];
 
         _speakerName = [[info nonNullValueForKey:@"name"] copy];
         _speakerTitle = [[info nonNullValueForKey:@"title"] copy];
