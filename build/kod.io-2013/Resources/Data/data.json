@@ -14,7 +14,7 @@
         {
             "name": "Mattt Thompson",
             "title": "Mobile Lead at Heroku",
-            "bio_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Mobile Lead at <a href=\"http://heroku.com\" target=\"_blank\">Heroku</a>, and the creator &amp; maintainer of <a href=\"http://afnetworking.com/\" target=\"_blank\">AFNetworking</a> and other popularopen-source projects, including <a href=\"http://postgresapp.com/\" target=\"_blank\">Postgres.app</a>, <a hef=\"http://helios.io/\" target=\"_blank\">Helios</a>, &amp; <a href=\"http://nomad-cli.com/\" target=\"_blank\">Nomad</a>. He also writes about obscure &amp; overlooked parts of Cocoa on <a href=\"http://nshipster.com\" target=\"_blank\">NSHipster</a>.</p>",
+            "bio_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Mobile Lead at <a href=\"http://heroku.com\" target=\"_blank\">Heroku</a>, and the creator &amp; maintainer of <a href=\"http://afnetworking.com/\" target=\"_blank\">AFNetworking</a> and other popular open-source projects, including <a href=\"http://postgresapp.com/\" target=\"_blank\">Postgres.app</a>, <a hef=\"http://helios.io/\" target=\"_blank\">Helios</a>, &amp; <a href=\"http://nomad-cli.com/\" target=\"_blank\">Nomad</a>. He also writes about obscure &amp; overlooked parts of Cocoa on <a href=\"http://nshipster.com\" target=\"_blank\">NSHipster</a>.</p>",
             "twitter": "mattt",
             "github": "http://github.com/mattt",
             "avatar": "http://kod.io/public/images/speakers/mattt-thompson@2x.jpg",
@@ -31,7 +31,7 @@
             "avatar": "http://kod.io/public/images/speakers/sinan-yasar@2x.jpg",
             "speech_time": "Sat, 26 Oct 2013 15:00:00 +0000",
             "speech_title": "Why I had to write a client side framework for Koding?",
-            "speech_detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">A journey from `how web applications are written` to `how javascript frameworks changed them`, an introduction to how client side frameworks empower webapps.</p>"
+            "speech_detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">I am going to talk about how web applications are written today and how javascript frameworks (will eventually) change them. </p><p style=\"font-family:'TisoOT';font-size:16px;\">We're going to cover how different javascript frameworks handle some problems such as templating, partials, mustaches, event binding, modularity etc. and how we approached them. Why we didn't pick the strict MVC rules but solved them more organically. Why we don't like dealing with html/css.</p><p>And finally why I had to start writing another one since there were some, and why it is written in coffeescript rather than javascript.</p>"
         },
         {
             "name": "Blake Mizerany",
@@ -97,7 +97,7 @@
             "avatar": "http://kod.io/public/images/speakers/joshua-ballanco@2x.jpg",
             "speech_time": "Sat, 26 Oct 2013 14:00:00 +0000",
             "speech_title": "Sure, I could learn Objective-C, but...",
-            "speech_detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">If you'vIf you've heard of RubyMotion, chances are that you've also heard people tell you to “just learn Objective-C”. In this talk, we'll look at how RubyMotion is so much more than a way to write iOS apps in another language. Using all the strengths of Ruby, we'll see how RubyMotion can make your code cleaner, easier to read, and more efficient.</p>"
+            "speech_detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">If you've heard of RubyMotion, chances are that you've also heard people tell you to “just learn Objective-C”. In this talk, we'll look at how RubyMotion is so much more than a way to write iOS apps in another language. Using all the strengths of Ruby, we'll see how RubyMotion can make your code cleaner, easier to read, and more efficient.</p>"
         },
         {
             "name": "Barış Daylık",
