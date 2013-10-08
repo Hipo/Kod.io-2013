@@ -663,8 +663,8 @@
 		B957277917F09A4200ED5088 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Hippo Foundry Inc. (W9875NV3WF)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hippo Foundry Inc. (W9875NV3WF)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Cemal Eker (Y8AXCZD7DE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Cemal Eker (Y8AXCZD7DE)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Dependencies",
 					"/Users/cemaleker/Hipo/kod.io/build/kod.io-2013/Dependencies",
@@ -686,7 +686,7 @@
 					"/Users/cemaleker/Hipo/kod.io/build/kod.io-2013/Dependencies/TestFlight",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4241F48D-8B54-48BC-8675-94457F3C9EBF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -694,7 +694,7 @@
 		B957277A17F09A4200ED5088 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Hippo Foundry Inc. (W9875NV3WF)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hippo Foundry Inc. (W9875NV3WF)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Dependencies",
@@ -713,7 +713,7 @@
 					"/Users/cemaleker/Hipo/kod.io/build/kod.io-2013/Dependencies/TestFlight",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "107847F0-0B58-4746-9706-D37BCDE09AB4";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
