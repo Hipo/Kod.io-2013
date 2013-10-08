@@ -31,7 +31,7 @@
             "avatar": "http://kod.io/public/images/speakers/sinan-yasar@2x.jpg",
             "speech_time": "Sat, 26 Oct 2013 15:00:00 +0000",
             "speech_title": "Why I had to write a client side framework for Koding?",
-            "speech_detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">I am going to talk about how web applications are written today and how javascript frameworks (will eventually) change them. </p><p style=\"font-family:'TisoOT';font-size:16px;\">We're going to cover how different javascript frameworks handle some problems such as templating, partials, mustaches, event binding, modularity etc. and how we approached them. Why we didn't pick the strict MVC rules but solved them more organically. Why we don't like dealing with html/css.</p><p>And finally why I had to start writing another one since there were some, and why it is written in coffeescript rather than javascript.</p>"
+            "speech_detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">I am going to talk about how web applications are written today and how javascript frameworks (will eventually) change them. </p><p style=\"font-family:'TisoOT';font-size:16px;\">We're going to cover how different javascript frameworks handle some problems such as templating, partials, mustaches, event binding, modularity etc. and how we approached them. Why we didn't pick the strict MVC rules but solved them more organically. Why we don't like dealing with html/css.</p><p style=\"font-family:'TisoOT';font-size:16px;\">And finally why I had to start writing another one since there were some, and why it is written in coffeescript rather than javascript.</p>"
         },
         {
             "name": "Blake Mizerany",
