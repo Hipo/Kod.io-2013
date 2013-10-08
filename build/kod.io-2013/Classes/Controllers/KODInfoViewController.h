@@ -6,11 +6,14 @@
 //  Copyright (c) 2013 kod.io. All rights reserved.
 //
 
-#import "KODBaseViewController.h"
+#import <MapKit/MapKit.h>
 #import <DTCoreText/DTCoreText.h>
 
+#import "KODBaseViewController.h"
+
+
 @interface KODInfoViewController : KODBaseViewController
-<DTAttributedTextContentViewDelegate, UITableViewDataSource, UITableViewDelegate>
+<DTAttributedTextContentViewDelegate, UITableViewDataSource, UITableViewDelegate, MKMapViewDelegate>
 
 @property (nonatomic, readwrite, assign) id<KODModalViewControllerDelegate> delegate;
 

@@ -92,6 +92,7 @@ static NSString * const KODSessionsViewControllerRequestIdentifier = @"KODSessio
     [_tableView setDelegate:self];
     [_tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [_tableView setRowHeight:90.0];
+    [_tableView setBackgroundColor:[UIColor sessionsCellBackgroundColor]];
     [self.contentView addSubview:_tableView];
 
 

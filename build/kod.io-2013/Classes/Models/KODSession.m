@@ -53,7 +53,7 @@
     self = [self init];
 
     if (nil != self) {
-        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
         [formatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss Z"]; //RFC2822-Format
 
         _speakerName = [[info nonNullValueForKey:@"name"] copy];

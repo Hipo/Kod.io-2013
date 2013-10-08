@@ -12,24 +12,42 @@
 #import "KODSplashViewController.h"
 #import "KODSessionsViewController.h"
 #import "KODDataManager.h"
+#import "TestFlight.h"
 
 #import "UIColor+Kodio.h"
 
 static NSTimeInterval const animationStisfactionInterval = 1.0;
 
+@interface KODAppDelegate () {
+    UIWindow *_window;
+}
+
+@end
+
 @implementation KODAppDelegate
+
+-(void)dealloc {
+    [_window release], _window = nil;
+
+    [super dealloc];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    [TestFlight setDeviceIdentifier:[[[UIDevice currentDevice] identifierForVendor] UUIDString]];
+    [TestFlight takeOff:@"31f2973a-ebcb-49a5-9df6-eaf7141a7297"];
+
+    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    _window.backgroundColor = [UIColor whiteColor];
+    [_window makeKeyAndVisible];
 
     // Controller hierarchy
     // ====================
 
-    KODSplashViewController *splashController = [[KODSplashViewController alloc] initWithNibName:nil
-                                                                                          bundle:nil];
+    KODSplashViewController *splashController = [[[KODSplashViewController alloc]
+                                                  initWithNibName:nil
+                                                  bundle:nil]
+                                                 autorelease];
 
 
     KODSessionsViewController *rootController = [[[KODSessionsViewController alloc]
@@ -40,7 +58,7 @@ static NSTimeInterval const animationStisfactionInterval = 1.0;
                                                       initWithRootViewController:rootController]
                                                      autorelease];
 
-    [self.window setRootViewController:navigationController];
+    [_window setRootViewController:navigationController];
 
     [navigationController presentViewController:splashController
                                        animated:NO
