@@ -14,7 +14,7 @@
         {
             "name": "Mattt Thompson",
             "title": "Mobile Lead at Heroku",
-            "bio_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Mobile Lead at <a href=\"http://heroku.com\" target=\"_blank\">Heroku</a>, and the creator &amp; maintainer of <a href=\"http://afnetworking.com/\" target=\"_blank\">AFNetworking</a> and other popularopen-source projects, including <a href=\"http://postgresapp.com/\" target=\"_blank\">Postgres.app</a>, <a hef=\"http://helios.io/\" target=\"_blank\">Helios</a>, &amp; <a href=\"http://nomad-cli.com/\" target=\"_blank\">Nomad</a>. He also writes about obscure &amp; overlooked parts of Cocoa on <a href=\"http://nshipster.com\" target=\"_blank\">NSHipster</a>.</                                                                                                                                                                                                                                                                                                                                                                                                                                                                       </p>",
+            "bio_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Mobile Lead at <a href=\"http://heroku.com\" target=\"_blank\">Heroku</a>, and the creator &amp; maintainer of <a href=\"http://afnetworking.com/\" target=\"_blank\">AFNetworking</a> and other popularopen-source projects, including <a href=\"http://postgresapp.com/\" target=\"_blank\">Postgres.app</a>, <a hef=\"http://helios.io/\" target=\"_blank\">Helios</a>, &amp; <a href=\"http://nomad-cli.com/\" target=\"_blank\">Nomad</a>. He also writes about obscure &amp; overlooked parts of Cocoa on <a href=\"http://nshipster.com\" target=\"_blank\">NSHipster</a>.</p>",
             "twitter": "mattt",
             "github": "http://github.com/mattt",
             "avatar": "http://kod.io/public/images/speakers/mattt-thompson@2x.jpg",
@@ -75,7 +75,7 @@
             "avatar": "http://kod.io/public/images/speakers/mark-bates@2x.jpg",
             "speech_time": "Sat, 26 Oct 2013 11:00:00 +0000",
             "speech_title": "AngularJS vs. Ember.js vs. Backbone.js",
-            "speech_detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">The world of JavaScript client-side frameworks is overflowing with contenders vying for the crown, but which one do you choose for your next project? Which one has what it takes?</p><pstyle=\"font-family:'TisoOT';font-size:16px;\">In this talk we’ll look at the “<strong>Big 3</strong>”, <strong>AngularJS</strong>, <strong>Ember.js</strong>, and <strong>Backbone.js</strong>. We’ll compare them head to head, toe to toe. We’ll look at the pros and cons of each one. How do they handle form bindings? Talking to APIs? Code organization? Routing? Etc?</p><p style=\"font-family:'TisoOT';font-size:16px;\">Who’ll come out victorious in this battle of the JavaScript frameworks, or will we all just come out bloodied and bruised on the other side? Guess we’ll find out!</p>"
+            "speech_detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">The world of JavaScript client-side frameworks is overflowing with contenders vying for the crown, but which one do you choose for your next project? Which one has what it takes? In this talk we’ll look at the “Big 3”, AngularJS, Ember.js, and Backbone.js. We’ll compare them head to head, toe to toe. We’ll look at the pros and cons of each one. How do they handle form bindings? Talking to APIs? Code organization? Routing? Etc? Who’ll come out victorious in this battle of the JavaScript frameworks, or will we all just come out bloodied and bruised on the other side? Guess we’ll find out!</p>"
         },
         {
             "name": "Taylan Pinçe",
@@ -86,7 +86,7 @@
             "avatar": "http://kod.io/public/images/speakers/taylan-pince@2x.jpg",
             "speech_time": "Sat, 26 Oct 2013 12:00:00 +0000",
             "speech_title": "Beyond REST: Mobile Applications and Custom API Protocols",
-            "speech_detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Most mobile applications are built on a <a href=\"http://en.wikipedia.org/wiki/Representational_state_transfer\">RESTful</a> API layer that uses standard HTTP for communicating back and forth. In this talk we will take a look at the principles of REST and how to best integrate them in a mobile context.</p><p style=\"font-family:'TisoOT';font-size:16px;\">But then we will take this topic further and explore what kind of specialized API layers can be used with mobile apps, such as custom TCP-based protocols and other purpose-built socket connections that offer more flexibility and live update features.</p>"
+            "speech_detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Most mobile applications are built on a RESTful API layer that uses standard HTTP for communicating back and forth. In this talk we will take a look at the principles of REST and how to best integrate them in a mobile context. But then we will take this topic further and explore what kind of specialized API layers can be used with mobile apps, such as custom TCP-based protocols and other purpose-built socket connections that offer more flexibility and live update features.</p>"
         },
         {
             "name": "Joshua Ballanco",
@@ -97,7 +97,7 @@
             "avatar": "http://kod.io/public/images/speakers/joshua-ballanco@2x.jpg",
             "speech_time": "Sat, 26 Oct 2013 14:00:00 +0000",
             "speech_title": "Sure, I could learn Objective-C, but...",
-            "speech_detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">If you've heard of RubyMotion, chances are that you've also heard people tell you to \"just learn Objective-C\". In this talk, we'll look at how RubyMotion is so much more than a way to write iOS apps in another language.</p><p style=\"font-family:'TisoOT';font-size:16px;\">Using all the strengths of Ruby, we'll see how RubyMotion can make your code cleaner, easier to read, and more efficient.</p>"
+            "speech_detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">If you'vIf you've heard of RubyMotion, chances are that you've also heard people tell you to “just learn Objective-C”. In this talk, we'll look at how RubyMotion is so much more than a way to write iOS apps in another language. Using all the strengths of Ruby, we'll see how RubyMotion can make your code cleaner, easier to read, and more efficient.</p>"
         },
         {
             "name": "Barış Daylık",
@@ -107,8 +107,8 @@
             "github": "http://github.com/bdaylik",
             "avatar": "http://kod.io/public/images/speakers/baris-daylik@2x.jpg",
             "speech_time": "Sat, 26 Oct 2013 09:40:00 +0000",
-            "speech_title": "---",
-            "speech_detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">---</p>"
+            "speech_title": "Reactive Principles",
+            "speech_detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Developers have big challenges today. Multi-core and multi-node deployments are becoming de facto standart, demand for distributed and parallel applications is ever increasing. Users are expecting faster responses and high-availability, downtimes won't be forgiven. To overcome those challenges, applications should be event-driven, easily scalable, much more responsive, and fault-tolerant from ground up, thus "reactive". This talk will introduce you the reactive principles.</p>"
         }
     ],
     "info": {
