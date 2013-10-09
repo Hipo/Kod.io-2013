@@ -17,6 +17,9 @@
 @private
     NSArray *_sessions;
     NSDictionary *_info;
+
+    NSError *_fetchError;
+    NSDate *_fetchTime;
 }
 
 @end
@@ -40,6 +43,15 @@ static KODDataManager * sharedInstance = nil;
     });
 
     return sharedInstance;
+}
+
+- (void)dealloc {
+    [_sessions release], _sessions = nil;
+    [_info release], _info = nil;
+    [_fetchError release], _fetchError = nil;
+    [_fetchTime release], _fetchTime = nil;
+
+    [super dealloc];
 }
 
 #pragma mark - Fetch Method
@@ -114,7 +126,13 @@ static KODDataManager * sharedInstance = nil;
                                                    cached:NO];
 
     [request addCompletionBlock:^(id resources, NSError *error) {
+        [_fetchError autorelease];
+        _fetchError = [error retain];
+
         if (nil == error) {
+            [_fetchTime autorelease];
+            _fetchTime = [[NSDate date] retain];
+
             NSDictionary *infoInfo = [resources nonNullValueForKey:@"info"];
             NSArray *sessionsInfo = [resources nonNullValueForKey:@"sessions"];
             NSMutableArray *sessions = [NSMutableArray array];

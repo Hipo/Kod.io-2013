@@ -16,7 +16,8 @@
 
 #import "UIColor+Kodio.h"
 
-static NSTimeInterval const animationStisfactionInterval = 1.0;
+static NSTimeInterval const animationStisfactionInterval = 6.0;
+static NSTimeInterval const dataRefetchInterval = 3600.0;
 
 @interface KODAppDelegate () {
     UIWindow *_window;
@@ -44,11 +45,6 @@ static NSTimeInterval const animationStisfactionInterval = 1.0;
     // Controller hierarchy
     // ====================
 
-    KODSplashViewController *splashController = [[[KODSplashViewController alloc]
-                                                  initWithNibName:nil
-                                                  bundle:nil]
-                                                 autorelease];
-
 
     KODSessionsViewController *rootController = [[[KODSessionsViewController alloc]
                                                   initWithNibName:nil bundle:nil]
@@ -60,10 +56,6 @@ static NSTimeInterval const animationStisfactionInterval = 1.0;
 
     [_window setRootViewController:navigationController];
 
-    [navigationController presentViewController:splashController
-                                       animated:NO
-                                     completion:nil];
-
     // UIAppearance Calls
 
     if ([navigationController.navigationBar respondsToSelector:@selector(setBarTintColor:)]) {
@@ -74,14 +66,51 @@ static NSTimeInterval const animationStisfactionInterval = 1.0;
     }
 
 
+    return YES;
+}
+
+- (void)applicationWillResignActive:(UIApplication *)application {
+    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+}
+
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    [self fetchDataAndPresentWhenReady];
+}
+
+- (void)applicationWillTerminate:(UIApplication *)application {
+    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+
+}
+
+#pragma mark - Private
+
+- (void)fetchDataAndPresentWhenReady {
     // Loading animation and prersentation
     // ===================================
+
+    UINavigationController *navController = (UINavigationController *)_window.rootViewController;
 
     __block BOOL animationSatisfied = NO;
     __block BOOL dataFetched = NO;
 
     dispatch_block_t presentation = ^{
-        [rootController dismissViewControllerAnimated:YES completion:nil];
+        if ([[KODDataManager sharedManager] fetchError]) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil)
+                                                                message:NSLocalizedString(@"There was an error while fetching data.", nil)
+                                                               delegate:self
+                                                      cancelButtonTitle:NSLocalizedString(@"Retry", nil)
+                                                      otherButtonTitles:nil];
+
+            [alertView show];
+            [alertView release];
+        } else {
+            [navController dismissViewControllerAnimated:YES completion:nil];
+        }
     };
 
     double delayInSeconds = animationStisfactionInterval;
@@ -95,38 +124,43 @@ static NSTimeInterval const animationStisfactionInterval = 1.0;
 
     });
 
-    [[KODDataManager sharedManager] fetchDataWithCompletionBlock:^(NSError *error) {
-        dataFetched = YES;
+    KODDataManager *dataManager = [KODDataManager sharedManager];
 
-        if (animationSatisfied) {
-            presentation ();
+    if (dataManager.fetchError == nil
+        && dataManager.fetchTime
+        && [[NSDate date] timeIntervalSinceDate:dataManager.fetchTime] < dataRefetchInterval) {
+        presentation();
+    } else {
+        UINavigationController *navController = (UINavigationController *)_window.rootViewController;
+
+        if (![navController.presentedViewController isKindOfClass:[KODSplashViewController class]]) {
+            KODSplashViewController *splashController = [[[KODSplashViewController alloc]
+                                                          initWithNibName:nil
+                                                          bundle:nil]
+                                                         autorelease];
+
+            [navController presentViewController:splashController
+                                        animated:NO
+                                      completion:nil];
         }
-    }];
 
+        [navController popToRootViewControllerAnimated:NO];
 
-    return YES;
+        [dataManager fetchDataWithCompletionBlock:^(NSError *error) {
+            dataFetched = YES;
+
+            if (animationSatisfied) {
+                presentation ();
+            }
+        }];
+    }
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
+#pragma mark - UIAlertViewDelegate
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+- (void)alertView:(UIAlertView *)alertView
+didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    [self fetchDataAndPresentWhenReady];
 }
 
 @end

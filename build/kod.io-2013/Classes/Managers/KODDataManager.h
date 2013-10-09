@@ -18,4 +18,6 @@ extern NSString * const KODDataManagerFetchedDataNotification;
 @property (nonatomic, readonly, retain) NSArray *sessions;
 @property (nonatomic, readonly, retain) NSDictionary *info;
 
+@property (nonatomic, readonly, retain) NSError *fetchError;
+@property (nonatomic, readonly, retain) NSDate *fetchTime;
 @end

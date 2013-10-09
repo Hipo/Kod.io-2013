@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KODAppDelegate : UIResponder <UIApplicationDelegate>
+@interface KODAppDelegate : UIResponder <UIApplicationDelegate, UIAlertViewDelegate>
 
 @end
