@@ -18,4 +18,6 @@
 
 @property (nonatomic, readonly) UIView *contentView;
 
+- (NSString *)uniqueIdentifier;
+
 @end

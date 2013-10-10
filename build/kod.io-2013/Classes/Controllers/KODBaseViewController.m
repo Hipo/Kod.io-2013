@@ -6,9 +6,12 @@
 //  Copyright (c) 2013 kod.io. All rights reserved.
 //
 
+#import "Mixpanel.h"
+
 #import "KODBaseViewController.h"
 
 #import "UIColor+Kodio.h"
+
 
 @interface KODBaseViewController ()
 
@@ -24,6 +27,10 @@
     [super viewDidLoad];
 
     [self.view setBackgroundColor:[UIColor sessionsCellBackgroundColor]];
+    
+    if ([self uniqueIdentifier] != nil) {
+        [[Mixpanel sharedInstance] track:[self uniqueIdentifier] properties:nil];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -39,6 +46,14 @@
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
+}
+
+#pragma mark - Identifier
+
+- (NSString *)uniqueIdentifier {
+    return [[[[self class] description] substringFromIndex:3]
+            stringByReplacingOccurrencesOfString:@"ViewController"
+            withString:@""];
 }
 
 @end

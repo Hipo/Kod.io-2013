@@ -6,18 +6,22 @@
 //  Copyright (c) 2013 kod.io. All rights reserved.
 //
 
-#import "KODAppDelegate.h"
+#import "TestFlight.h"
+#import "Mixpanel.h"
 
+#import "KODAppDelegate.h"
 #import "KODNavigationController.h"
 #import "KODSplashViewController.h"
 #import "KODSessionsViewController.h"
 #import "KODDataManager.h"
-#import "TestFlight.h"
 
 #import "UIColor+Kodio.h"
 
+
 static NSTimeInterval const animationStisfactionInterval = 6.0;
 static NSTimeInterval const dataRefetchInterval = 3600.0;
+static NSString * const KODMixPanelToken = @"707075da25dc6bcec22982543ec61181";
+
 
 @interface KODAppDelegate () {
     UIWindow *_window;
@@ -25,9 +29,10 @@ static NSTimeInterval const dataRefetchInterval = 3600.0;
 
 @end
 
+
 @implementation KODAppDelegate
 
--(void)dealloc {
+- (void)dealloc {
     [_window release], _window = nil;
 
     [super dealloc];
@@ -37,6 +42,8 @@ static NSTimeInterval const dataRefetchInterval = 3600.0;
 
     [TestFlight setDeviceIdentifier:[[[UIDevice currentDevice] identifierForVendor] UUIDString]];
     [TestFlight takeOff:@"31f2973a-ebcb-49a5-9df6-eaf7141a7297"];
+    
+    [Mixpanel sharedInstanceWithToken:KODMixPanelToken];
 
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     _window.backgroundColor = [UIColor whiteColor];
@@ -65,6 +72,9 @@ static NSTimeInterval const dataRefetchInterval = 3600.0;
         [navigationController.navigationBar setTintColor:[UIColor navigationBarColor]];
     }
 
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeAlert |
+                                                                           UIRemoteNotificationTypeBadge |
+                                                                           UIRemoteNotificationTypeSound)];
 
     return YES;
 }
@@ -80,6 +90,8 @@ static NSTimeInterval const dataRefetchInterval = 3600.0;
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     [self fetchDataAndPresentWhenReady];
+    
+    [[Mixpanel sharedInstance] track:@"App Launch"];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
@@ -161,6 +173,20 @@ static NSTimeInterval const dataRefetchInterval = 3600.0;
 - (void)alertView:(UIAlertView *)alertView
 didDismissWithButtonIndex:(NSInteger)buttonIndex {
     [self fetchDataAndPresentWhenReady];
+}
+
+#pragma mark - Push notifications
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    [[[Mixpanel sharedInstance] people] addPushDeviceToken:deviceToken];
 }
 
 @end

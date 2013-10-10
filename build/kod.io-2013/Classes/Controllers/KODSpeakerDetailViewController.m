@@ -397,4 +397,10 @@ static CGFloat const kSpeakerTitleTopMargin = 100.0;
     return linkButton;
 }
 
+#pragma mark - Unique identifier
+
+- (NSString *)uniqueIdentifier {
+    return _session.speakerName;
+}
+
 @end
