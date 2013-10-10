@@ -45,7 +45,7 @@
     [_splashOverlay setImage:[UIImage imageNamed:@"splash-overlay.png"]];
     [_splashOverlay setContentMode:UIViewContentModeCenter];
 
-    _animatingView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"splash-blur.png"]];
+    _animatingView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"splash-blur.jpg"]];
     [_animatingView sizeToFit];
 
     CGRect viewFrame = _animatingView.frame;

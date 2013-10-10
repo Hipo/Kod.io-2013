@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 kod.io. All rights reserved.
 //
 
+#import <Parse/Parse.h>
+
 #import "TestFlight.h"
 #import "Mixpanel.h"
 
@@ -44,6 +46,11 @@ static NSString * const KODMixPanelToken = @"707075da25dc6bcec22982543ec61181";
     [TestFlight takeOff:@"31f2973a-ebcb-49a5-9df6-eaf7141a7297"];
     
     [Mixpanel sharedInstanceWithToken:KODMixPanelToken];
+    
+    [Parse setApplicationId:@"wfRLALxcoTvUyQfZ3NPjYFtB8YNVy2chWDifEDnB"
+                  clientKey:@"6mnAvm2lGI9JVIiyisIdMuVY6hOe1Ckzx5VXrvVM"];
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
 
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     _window.backgroundColor = [UIColor whiteColor];
@@ -182,11 +189,13 @@ didDismissWithButtonIndex:(NSInteger)buttonIndex {
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    
+    [PFPush handlePush:userInfo];
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    [[[Mixpanel sharedInstance] people] addPushDeviceToken:deviceToken];
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
 }
 
 @end
