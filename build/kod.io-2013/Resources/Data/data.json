@@ -85,8 +85,8 @@
                  "github": "http://github.com/taylanpince",
                  "avatar": "http://kod.io/public/images/speakers/taylan-pince@2x.jpg",
                  "speech_time": "Sat, 26 Oct 2013 12:00:00 +0000",
-                 "speech_title": "Beyond REST: Mobile Applications and Custom API Protocols",
-                 "speech_detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Most mobile applications are built on a RESTful API layer that uses standard HTTP for communicating back and forth. In this talk we will take a look at the principles of REST and how to best integrate them in a mobile context. But then we will take this topic further and explore what kind of specialized API layers can be used with mobile apps, such as custom TCP-based protocols and other purpose-built socket connections that offer more flexibility and live update features.</p>"
+                 "speech_title": "iBeacons: Interacting with the physical world using Bluetooth LE",
+                 "speech_detail_html": "<p style=\"font-family:'TisoOT';font-size:16px;\">Bluetooth LE technology has been around for a few years, but with the recent introduction of the iBeacon protocol in iOS7, apps are now able to keep track of their physcial environment with very high accuracy.</p><p style=\"font-family:'TisoOT';font-size:16px;\">In this talk, we will look at what Bluetooth LE technology offers us to communicate with peripheral devices and we will also investigate the iBeacon protocol and the ability to track device movements even when an app is not active.</p>"
                  },
                  {
                  "name": "Joshua Ballanco",
